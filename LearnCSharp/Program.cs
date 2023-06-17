@@ -49,6 +49,10 @@ The code repeatedly prints asterisks in each row, forming a rectangular shape.
 Console.WriteLine(codeExplanation1);
 
 
+
+
+
+
 Console.WriteLine();
 Console.WriteLine("2. Use variables");
 Console.WriteLine();
