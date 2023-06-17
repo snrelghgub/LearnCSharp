@@ -4,12 +4,16 @@ Console.BackgroundColor = ConsoleColor.DarkBlue;
 Console.WriteLine("Learn C#");
 Console.ResetColor();
 
+
+
+
+
 Console.WriteLine();
 Console.WriteLine("1. Draw a shape");
 Console.WriteLine();
 
-int width = 10;  // width of the rectangle
-int height = 5;  // height of the rectangle
+int width = 10; 
+int height = 5;
 
 for (int i = 0; i < height; i++)
 {
@@ -19,6 +23,31 @@ for (int i = 0; i < height; i++)
     }
     Console.WriteLine();
 }
+
+string codeExample1 = @"
+int width = 10; 
+int height = 5;
+
+for (int i = 0; i < height; i++)
+{
+    for (int j = 0; j < width; j++)
+    {
+        Console.Write("" * "");
+    }
+    Console.WriteLine();
+}";
+
+Console.WriteLine(codeExample1);
+
+string codeExplanation1 = @"
+The code uses two loops to draw a rectangle made of asterisks ('*'). The 'width' & 'height' 
+variables determine the dimensions of the rectangle. The outer loop controls the number of 
+rows, & the inner loop controls the number of asterisks printed per row. 
+The code repeatedly prints asterisks in each row, forming a rectangular shape.
+";
+
+Console.WriteLine(codeExplanation1);
+
 
 Console.WriteLine();
 Console.WriteLine("2. Use variables");
