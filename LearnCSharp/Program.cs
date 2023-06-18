@@ -1,4 +1,5 @@
-﻿
+﻿using Faker;
+
 Console.ForegroundColor = ConsoleColor.Green;
 Console.BackgroundColor = ConsoleColor.DarkBlue;
 Console.WriteLine("Learn C#");
@@ -103,3 +104,43 @@ variables to the console. Other examples of classes in the System namespace
 are 'DateTime' and 'ConsoleColor'.";
 
 Console.WriteLine(codeExplanation2);
+
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("4. Work with strings");
+Console.WriteLine();
+
+// Person 1
+string name1 = Faker.Name.FullName(NameFormats.Standard);
+string address1 = Faker.Address.StreetAddress() + ", " + Faker.Address.City() + ", " + Faker.Address.UsState() + ", " + Faker.Address.ZipCode();
+
+// Person 2
+string name2 = Faker.Name.FullName(NameFormats.Standard);
+string landlineNumber2 = Faker.Phone.Number().Replace(".", "-").Split('x')[0].Trim();
+
+// Person 3
+string name3 = Faker.Name.FullName(NameFormats.Standard);
+string address3 = Faker.Address.StreetAddress() + ", " + Faker.Address.City() + ", " + Faker.Address.UsState() + ", " + Faker.Address.ZipCode();
+string landlineNumber3 = Faker.Phone.Number().Replace(".", "-").Split('x')[0].Trim();
+
+// Person 1
+Console.WriteLine(name1);
+Console.WriteLine(address1);
+
+Console.WriteLine();
+
+//Person 2
+Console.WriteLine(name2);
+Console.WriteLine(landlineNumber2);
+
+Console.WriteLine();
+
+//Person 3
+Console.WriteLine(name3);
+Console.WriteLine(address3);
+Console.WriteLine(landlineNumber3);
