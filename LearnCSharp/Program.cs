@@ -172,3 +172,19 @@ foreach (string person in people)
 }";
 
 Console.WriteLine(codeExample4);
+
+string codeExplanation4 = @"
+This code utilizes the Faker.Net library to generate three fake individuals' 
+information, including their names, addresses, & landline numbers. The 
+generated details are stored in separate string variables. These variables 
+are then inserted into a string array 'people', allowing the code to loop 
+through each person's information & report the occurrence of their name, 
+address, & landline number. The Contains() method is employed to check 
+for the presence of specific details within each person's string, enabling 
+the code to generate a report for each individual. This code provides a 
+practical example of working with strings in C#, showcasing concatenation, 
+string arrays, and the Contains() method for efficient string handling & 
+analysis.
+";
+
+Console.WriteLine(codeExplanation4);
