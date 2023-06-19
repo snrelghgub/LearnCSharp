@@ -118,29 +118,26 @@ Console.WriteLine();
 // Person 1
 string name1 = Faker.Name.FullName(NameFormats.Standard);
 string address1 = Faker.Address.StreetAddress() + ", " + Faker.Address.City() + ", " + Faker.Address.UsState() + ", " + Faker.Address.ZipCode();
+string person1 = String.Concat("Name: ", name1,"\nAddress: ", address1, "\nLandline number: ");
 
 // Person 2
 string name2 = Faker.Name.FullName(NameFormats.Standard);
 string landlineNumber2 = Faker.Phone.Number().Replace(".", "-").Split('x')[0].Trim();
+string person2 = String.Concat("Name: ", name2, "\nAddress: ", "\nLandline number: ", landlineNumber2);
 
 // Person 3
 string name3 = Faker.Name.FullName(NameFormats.Standard);
 string address3 = Faker.Address.StreetAddress() + ", " + Faker.Address.City() + ", " + Faker.Address.UsState() + ", " + Faker.Address.ZipCode();
 string landlineNumber3 = Faker.Phone.Number().Replace(".", "-").Split('x')[0].Trim();
+string person3 = String.Concat("Name: ", name3, "\nAddress: ", address3, "\nLandline number: ", landlineNumber3);
 
 // Person 1
-Console.WriteLine(name1);
-Console.WriteLine(address1);
-
+Console.WriteLine(person1);
 Console.WriteLine();
 
 //Person 2
-Console.WriteLine(name2);
-Console.WriteLine(landlineNumber2);
-
+Console.WriteLine(person2);
 Console.WriteLine();
 
 //Person 3
-Console.WriteLine(name3);
-Console.WriteLine(address3);
-Console.WriteLine(landlineNumber3);
+Console.WriteLine(person3);
