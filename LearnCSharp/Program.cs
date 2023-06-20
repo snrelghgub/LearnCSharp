@@ -111,6 +111,48 @@ Console.WriteLine(codeExplanation2);
 
 
 
+Console.WriteLine();
+Console.WriteLine("3. Use the appropriate data type");
+Console.WriteLine();
+
+float num1 = 1.1234567890123456789f;
+double num2 = 1.1234567890123456789;
+decimal num3 = 1.1234567890123456789m;
+
+Console.WriteLine("num1 (float):" + num1);
+Console.WriteLine("num2 (double):" + num2);
+Console.WriteLine("num3 (decimal):" + num3);
+
+string codeExample3 = @"
+float num1 = 1.1234567890123456789f;
+double num2 = 1.1234567890123456789;
+decimal num3 = 1.1234567890123456789m;
+
+Console.WriteLine(""num1 (float):"" + num1);
+Console.WriteLine(""num2 (double):"" + num2);
+Console.WriteLine(""num3 (decimal):"" + num3);
+";
+
+Console.WriteLine(codeExample3);
+
+string codeExplanation3 = @"
+The code demonstrates the differences in precision among 'float', 'double', 
+& 'decimal' data types. 'Float' offers the lowest precision with approximately 
+7 significant digits, while 'double' provides higher precision with around 
+15-16 significant digits. Decimal offers the highest precision with 
+approximately 28-29 significant digits. Use 'decimal' for situations requiring 
+utmost precision, like financial calculations, to avoid rounding errors. 
+Use 'float' when storage efficiency is crucial & the extra precision is 
+not necessary, such as in large datasets where reducing memory footprint 
+improves performance.
+";
+
+Console.Write(codeExplanation3);
+
+
+
+
+
 
 Console.WriteLine();
 Console.WriteLine("4. Work with strings");
