@@ -230,3 +230,45 @@ analysis.
 ";
 
 Console.WriteLine(codeExplanation4);
+
+Console.WriteLine();
+Console.WriteLine("5. Work with numbers");
+Console.WriteLine();
+
+double radius = 5;
+double angle = 45;
+double radians = angle * (Math.PI / 180);
+double xCoordinate = radius * Math.Cos(radians);
+double yCoordinate = radius * Math.Sin(radians);
+Console.WriteLine(String.Concat(
+    "The (x,y) coordinates of a point on a circle with radius ", radius,
+    "at an angle of ", angle, "\u00B0 is ",
+    "(", Math.Round(xCoordinate, 2), ",", Math.Round(yCoordinate, 2), ")"));
+
+string codeExample5 = @"
+double radius = 5;
+double angle = 45;
+double radians = angle * (Math.PI / 180);
+double xCoordinate = radius * Math.Cos(radians);
+double yCoordinate = radius * Math.Sin(radians);
+Console.WriteLine(String.Concat(
+    ""The (x, y) coordinates of a point on a circle with radius "", radius,
+    ""at an angle of "", angle, ""\u00B0 is "",
+    ""("", Math.Round(xCoordinate, 2), "","", Math.Round(yCoordinate, 2), "")""));
+}";
+
+Console.WriteLine(codeExample5);
+
+string codeExplanation5 = @"
+This code calculates the (x, y) coordinates of a point on a circle with 
+a given 'radius' & 'angle'. By utilizing the Math library's methods 
+such as 'Cos()', 'Sin()', and constants like 'PI', the code converts 
+the 'angle' from degrees to 'radians' & then calculates the x & y 
+coordinates using trigonometric functions. The result is displayed 
+in a formatted message using 'Console.WriteLine', with the 
+coordinates rounded to two decimal places for clarity. These Math 
+library functions & constants make it easier to perform calculations 
+involving angles, circles & trigonometry.
+";
+
+Console.WriteLine(codeExplanation5);
