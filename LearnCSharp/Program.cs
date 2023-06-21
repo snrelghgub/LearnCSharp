@@ -1,5 +1,4 @@
 ﻿using Faker;
-using System.Text.RegularExpressions;
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.BackgroundColor = ConsoleColor.DarkBlue;
