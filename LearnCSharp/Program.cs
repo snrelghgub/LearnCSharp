@@ -212,11 +212,6 @@ foreach (string person in people)
     Console.WriteLine();
 }";
 
-
-
-
-
-
 Console.WriteLine(codeExample4);
 
 string codeExplanation4 = @"
@@ -234,6 +229,11 @@ analysis.
 ";
 
 Console.WriteLine(codeExplanation4);
+
+
+
+
+
 
 Console.WriteLine();
 Console.WriteLine("5. Work with numbers");
@@ -276,3 +276,38 @@ involving angles, circles & trigonometry.
 ";
 
 Console.WriteLine(codeExplanation5);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("6. Get user input");
+Console.WriteLine();
+
+Console.Write("Enter your country name (press Enter for default - Australia): ");
+string? countryName = Console.ReadLine();
+countryName = String.IsNullOrWhiteSpace(countryName) ? "Australia" : countryName;
+Console.Write("Enter your city name (press Enter for default - Sydney): ");
+string? cityName = Console.ReadLine();
+
+Console.WriteLine();
+cityName = String.IsNullOrWhiteSpace(cityName) ? "Sydney" : cityName;
+
+Console.WriteLine("You live in " + countryName + " & you're located in the city of " + cityName +"!");
+
+string codeExample6 = @"
+Console.Write(""Enter your country name (press Enter for default - Australia): "");
+string? countryName = Console.ReadLine();
+countryName = String.IsNullOrWhiteSpace(countryName) ? ""Australia"" : countryName;
+Console.Write(""Enter your city name (press Enter for default - Sydney): "");
+string? cityName = Console.ReadLine();
+
+Console.WriteLine();
+cityName = String.IsNullOrWhiteSpace(cityName) ? ""Sydney"" : cityName;
+
+Console.WriteLine(""You live in "" + countryName + "" & you're located in the city of "" + cityName + ""!""); 
+";
+
+Console.WriteLine(codeExample6);
