@@ -311,3 +311,16 @@ Console.WriteLine(""You live in "" + countryName + "" & you're located in the ci
 ";
 
 Console.WriteLine(codeExample6);
+
+string codeExplanation6 = @"
+This code collects user input for the country name & city name 
+using the 'Console.ReadLine()' method. The 'String.IsNullOrWhiteSpace() '
+method is then used to check if the input is 'null' or consists only of 
+whitespace characters. If the input is 'null' or empty, default values 
+'Australia' for the country name & 'Sydne'y for the city name are assigned. 
+The program then outputs a message to the user displaying the country name, 
+city name, & additional text. The important methods used are 'Console.Write()', 
+'Console.ReadLine()' & 'String.IsNullOrWhiteSpace()'.
+";
+
+Console.WriteLine(codeExplanation6);
