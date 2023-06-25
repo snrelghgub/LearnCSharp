@@ -1,4 +1,5 @@
 ﻿using Faker;
+using LearnCSharp;
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.BackgroundColor = ConsoleColor.DarkBlue;
@@ -314,7 +315,7 @@ Console.WriteLine(codeExample6);
 
 string codeExplanation6 = @"
 This code collects user input for the country name & city name 
-using the 'Console.ReadLine()' method. The 'String.IsNullOrWhiteSpace() '
+using the 'Console.ReadLine()' method. The 'String.IsNullOrWhiteSpace()'
 method is then used to check if the input is 'null' or consists only of 
 whitespace characters. If the input is 'null' or empty, default values 
 'Australia' for the country name & 'Sydne'y for the city name are assigned. 
@@ -324,3 +325,32 @@ city name, & additional text. The important methods used are 'Console.Write()',
 ";
 
 Console.WriteLine(codeExplanation6);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("6. Work with arrays");
+Console.WriteLine();
+
+//declare array of size 4 to contain 4 employees
+Employee[] employees = new Employee[4];
+
+//populate employees array
+for (int i = 0; i < employees.Length; i++)
+{
+    DateTime minStartDate = DateTime.Now.AddYears(-10);
+    employees[i] = new Employee
+    {
+        EmployeeId = i,
+        EmployeeName = Faker.Name.FullName(NameFormats.Standard),
+        EmployeeStartDate = minStartDate.AddDays(new Random().Next((DateTime.Today - minStartDate).Days))
+    };  
+}
+
+for (int i = 0; i < employees.Length; i++)
+{
+    Console.WriteLine(employees[i].EmployeeName + " started work " + DateTime.Now.Subtract(employees[i].EmployeeStartDate).Days + " days ago.");
+}
