@@ -400,7 +400,7 @@ Console.WriteLine(codeExplanation7);
 
 
 Console.WriteLine();
-Console.WriteLine("8. Work with arrays");
+Console.WriteLine("8. Write a method");
 Console.WriteLine();
 
 static void SayHelloWorld()
