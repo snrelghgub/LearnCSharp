@@ -332,13 +332,11 @@ Console.WriteLine(codeExplanation6);
 
 
 Console.WriteLine();
-Console.WriteLine("6. Work with arrays");
+Console.WriteLine("7. Work with arrays");
 Console.WriteLine();
 
-//declare array of size 4 to contain 4 employees
 Employee[] employees = new Employee[4];
 
-//populate employees array
 for (int i = 0; i < employees.Length; i++)
 {
     DateTime minStartDate = DateTime.Now.AddYears(-10);
@@ -347,10 +345,88 @@ for (int i = 0; i < employees.Length; i++)
         EmployeeId = i,
         EmployeeName = Faker.Name.FullName(NameFormats.Standard),
         EmployeeStartDate = minStartDate.AddDays(new Random().Next((DateTime.Today - minStartDate).Days))
-    };  
+    };
 }
 
 for (int i = 0; i < employees.Length; i++)
 {
-    Console.WriteLine(employees[i].EmployeeName + " started work " + DateTime.Now.Subtract(employees[i].EmployeeStartDate).Days + " days ago.");
+    Console.WriteLine(
+        employees[i].EmployeeName + " started work "
+        + DateTime.Now.Subtract(employees[i].EmployeeStartDate).Days + " days ago.");
 }
+
+string codeExample7 = @"
+Employee[] employees = new Employee[4];
+
+for (int i = 0; i < employees.Length; i++)
+{
+    DateTime minStartDate = DateTime.Now.AddYears(-10);
+    employees[i] = new Employee
+    {
+        EmployeeId = i,
+        EmployeeName = Faker.Name.FullName(NameFormats.Standard),
+        EmployeeStartDate = minStartDate.AddDays(new Random().Next((DateTime.Today - minStartDate).Days))
+    };
+}
+
+for (int i = 0; i < employees.Length; i++)
+{
+    Console.WriteLine(
+        employees[i].EmployeeName + "" started work ""
+        + DateTime.Now.Subtract(employees[i].EmployeeStartDate).Days + "" days ago."");
+}
+";
+
+Console.WriteLine(codeExample7);
+
+string codeExplanation7 = @"
+The provided code generates an array 'employees' of size 4. 
+Using a 'for' loop, it populates each element with a newly 
+created 'Employee' object containing a unique 'EmployeeId', 
+a fake 'EmployeeName', & a random 'EmployeeStartDate' within 
+the past 10 years. In a subsequent loop, the code traverses 
+the 'employees' array, accessing each employee's data using 
+the loop index 'i'. It outputs their name & the calculated 
+number of days they have worked, determined by subtracting 
+their 'EmployeeStartDate' from the current date using 
+'DateTime.Now.Subtract()'.
+";
+
+Console.WriteLine(codeExplanation7);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("8. Work with arrays");
+Console.WriteLine();
+
+static void SayHelloWorld()
+{
+    Console.WriteLine("Hello World");
+}
+
+SayHelloWorld();
+
+string codeExample8 = @"
+static void SayHelloWorld()
+{
+    Console.WriteLine(""Hello World"");
+}
+
+SayHelloWorld();
+";
+
+Console.WriteLine(codeExample8);
+
+string codeExplanation8 = @"
+The code snippet defines a method called ""SayHelloWorld()"" 
+in C# with a return type of ""void "". This method writes 
+""Hello World"" to the console when invoked. It can be called 
+directly without creating an object of a class, making it a 
+convenient way to display the message without unnecessary complexity.
+";
+
+Console.WriteLine(codeExplanation8);
