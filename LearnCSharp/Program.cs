@@ -400,7 +400,7 @@ Console.WriteLine(codeExplanation7);
 
 
 Console.WriteLine();
-Console.WriteLine("8. Write a method");
+Console.WriteLine("8. Write a simple method");
 Console.WriteLine();
 
 static void SayHelloWorld()
@@ -430,3 +430,12 @@ convenient way to display the message without unnecessary complexity.
 ";
 
 Console.WriteLine(codeExplanation8);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("9. Write a more complex method");
+Console.WriteLine();
