@@ -439,3 +439,41 @@ Console.WriteLine(codeExplanation8);
 Console.WriteLine();
 Console.WriteLine("9. Write a more complex method");
 Console.WriteLine();
+
+static int fib(int n)
+{
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 2) + fib(n - 1);
+}
+
+Console.WriteLine(
+    "The 4th number in the fibonacci sequence is: "
+    + fib(4).ToString()
+);
+
+string codeExample9 = @"
+static int fib(int n)
+{
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 2) + fib(n - 1);
+}
+";
+
+Console.Write(codeExample9);
+
+string codeExplanation9 = @"
+This code implements the Fibonacci sequence using a 
+concise recursive approach. The method fib() takes 
+an integer n as input & returns the nth Fibonacci number. 
+It uses the base cases of 0 and 1, returning those 
+values directly. For other values of n, it recursively 
+calls itself with n - 2 and n - 1 as arguments & returns
+the sum of the two recursive calls. The recursion stops 
+when n reaches 0 or 1. This concise implementation 
+demonstrates the power of recursion in solving problems 
+by breaking them down into smaller, simpler cases.
+";
+
+Console.WriteLine(codeExplanation9);
