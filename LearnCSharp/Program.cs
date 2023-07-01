@@ -448,7 +448,7 @@ static int fib(int n)
 }
 
 Console.WriteLine(
-    "The 4th number in the fibonacci sequence is: "
+    "The 4th number in the Fibonacci sequence is: "
     + fib(4).ToString()
 );
 
