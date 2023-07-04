@@ -477,3 +477,44 @@ by breaking them down into smaller, simpler cases.
 ";
 
 Console.WriteLine(codeExplanation9);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("9. Write if & switch statements");
+Console.WriteLine();
+
+List<Person> group = new List<Person>();
+
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 11 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 15 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 24 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 67 });
+
+static void printAgeMeaning(Person person)
+{
+    if (person.age <= 12)
+    {
+        Console.WriteLine(person.name + " is a child.");
+    }
+    else if (person.age <= 19)
+    {
+        Console.WriteLine(person.name + " is an adolescent.");
+    }
+    else if (person.age < 65)
+    {
+        Console.WriteLine(person.name + " is an adult.");
+    }
+    else
+    {
+        Console.WriteLine(person.name + "is a Senior.");
+    }
+}
+
+foreach (Person person in group)
+{
+    printAgeMeaning(person);
+}
