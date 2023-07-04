@@ -494,13 +494,13 @@ group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 1
 group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 24 });
 group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 67 });
 
-static void printAgeMeaning(Person person)
+static void printAgeMeaning1(Person person)
 {
-    if (person.age <= 12)
+    if (person.age < 13)
     {
         Console.WriteLine(person.name + " is a child.");
     }
-    else if (person.age <= 19)
+    else if (person.age < 20)
     {
         Console.WriteLine(person.name + " is an adolescent.");
     }
@@ -514,7 +514,34 @@ static void printAgeMeaning(Person person)
     }
 }
 
+static void printAgeMeaning2(Person person)
+{
+    switch (person.age)
+    {
+        case var age when age < 13:
+            Console.WriteLine(person.name + " is a child.");
+            break;
+        case var age when age < 20:
+            Console.WriteLine(person.name + " is an adolescent.");
+            break;
+        case var age when age < 65:
+            Console.WriteLine(person.name + " is an adult.");
+            break;
+        default:
+            Console.WriteLine(person.name + "is a Senior.");
+            break;
+    }
+}
+
+Console.WriteLine("Using 'if' statements:");
 foreach (Person person in group)
 {
-    printAgeMeaning(person);
+    printAgeMeaning1(person);
+}
+
+Console.WriteLine();
+Console.WriteLine("Using 'switch' statements:");
+foreach (Person person in group)
+{
+    printAgeMeaning2(person);
 }
