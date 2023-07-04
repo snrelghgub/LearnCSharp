@@ -484,7 +484,7 @@ Console.WriteLine(codeExplanation9);
 
 
 Console.WriteLine();
-Console.WriteLine("9. Write if & switch statements");
+Console.WriteLine("10. Write if & switch statements");
 Console.WriteLine();
 
 List<Person> group = new();
