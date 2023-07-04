@@ -487,7 +487,7 @@ Console.WriteLine();
 Console.WriteLine("9. Write if & switch statements");
 Console.WriteLine();
 
-List<Person> group = new List<Person>();
+List<Person> group = new();
 
 group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 11 });
 group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 15 });
