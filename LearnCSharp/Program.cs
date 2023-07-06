@@ -545,3 +545,81 @@ foreach (Person person in group)
 {
     printAgeMeaning2(person);
 }
+
+string codeExample10 = @"
+List<Person> group = new();
+
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 11 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 15 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 24 });
+group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 67 });
+
+static void printAgeMeaning1(Person person)
+{
+    if (person.age < 13)
+    {
+        Console.WriteLine(person.name + "" is a child."");
+    }
+    else if (person.age < 20)
+{
+    Console.WriteLine(person.name + "" is an adolescent."");
+}
+else if (person.age < 65)
+{
+    Console.WriteLine(person.name + "" is an adult."");
+}
+else
+{
+    Console.WriteLine(person.name + ""is a Senior."");
+}
+}
+
+static void printAgeMeaning2(Person person)
+{
+    switch (person.age)
+    {
+        case var age when age < 13:
+            Console.WriteLine(person.name + "" is a child."");
+            break;
+        case var age when age < 20:
+            Console.WriteLine(person.name + "" is an adolescent."");
+            break;
+        case var age when age < 65:
+            Console.WriteLine(person.name + "" is an adult."");
+            break;
+        default:
+            Console.WriteLine(person.name + ""is a Senior."");
+            break;
+    }
+}
+
+Console.WriteLine(""Using 'if' statements:"");
+foreach (Person person in group)
+{
+    printAgeMeaning1(person);
+}
+
+Console.WriteLine();
+Console.WriteLine(""Using 'switch' statements:"");
+foreach (Person person in group)
+{
+    printAgeMeaning2(person);
+}
+";
+
+Console.WriteLine(codeExample10);
+
+string codeExplanation = @"
+This code utilizes two methods, 'printAgeMeaning1' &
+'printAgeMeaning2,' to classify a list of people based
+on their age into categories like child, adolescent, 
+adult, & senior. The code employs if & switch statements 
+to evaluate the age of each person and prints their 
+corresponding classification along with their name. 
+It demonstrates the usage of conditional & switch-based 
+logic to handle different age ranges, providing an 
+organized approach for interpreting & categorizing 
+individuals based on their age within a group.
+";
+
+Console.WriteLine(codeExplanation);
