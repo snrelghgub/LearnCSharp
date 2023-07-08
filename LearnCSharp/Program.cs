@@ -672,3 +672,18 @@ foreach (string name in names)
 ";
 
 Console.WriteLine(codeExample11);
+
+string codeExplanation11 = @"
+The provided code uses a 'while' loop with a 
+'StreamReader' to read from a text file. For 
+each line, it splits the names separated by 
+commas & spaces, adding them to a 'List<string>'. 
+The extracted names are then printed. This 
+practical application demonstrates how to 
+process a file line by line, extract specific 
+data, & build a collection of values using a 
+'while' loop, which is suitable when dealing 
+with an unknown number of lines in the file.
+";
+
+Console.WriteLine(codeExplanation11);
