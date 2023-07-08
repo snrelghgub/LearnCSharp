@@ -634,6 +634,7 @@ Console.WriteLine("11. Use a while loop");
 Console.WriteLine();
 
 List<string> names = new();
+
 using (StreamReader sr = new StreamReader("..\\..\\..\\names-List.txt"))
 {
     string? line;
@@ -652,6 +653,7 @@ foreach (string name in names)
 
 string codeExample11 = @"
 List<string> names = new();
+
 using (StreamReader sr = new StreamReader(""..\\..\\..\\names-List.txt""))
 {
     string? line;
