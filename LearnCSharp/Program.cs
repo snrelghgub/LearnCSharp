@@ -649,3 +649,24 @@ foreach (string name in names)
 {
     Console.WriteLine(name);
 }
+
+string codeExample11 = @"
+List<string> names = new();
+using (StreamReader sr = new StreamReader(""..\\..\\..\\names-List.txt""))
+{
+    string? line;
+while ((line = sr.ReadLine()) != null)
+{
+    string[] splitNames = line.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+    names.AddRange(splitNames);
+}
+};
+
+Console.WriteLine(""The names extracted from the text file are:"");
+foreach (string name in names)
+{
+    Console.WriteLine(name);
+}
+";
+
+Console.WriteLine(codeExample11);
