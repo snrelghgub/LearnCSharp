@@ -623,3 +623,31 @@ individuals based on their age within a group.
 ";
 
 Console.WriteLine(codeExplanation);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("11. Use a while loop");
+Console.WriteLine();
+
+List<string> names = new();
+using (StreamReader sr = new StreamReader("..\\..\\..\\names-List.txt"))
+{
+    string? line;
+    while ((line = sr.ReadLine()) != null)
+    {
+        string[] splitNames = line.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        Console.WriteLine(splitNames[0]);
+        Console.WriteLine(splitNames[1]);
+        names.AddRange(splitNames);
+    }
+};
+
+Console.WriteLine("The names extracted from the text file are:");
+foreach(string name in names)
+{
+    Console.WriteLine(name);
+}
