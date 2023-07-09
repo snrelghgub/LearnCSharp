@@ -687,3 +687,45 @@ with an unknown number of lines in the file.
 ";
 
 Console.WriteLine(codeExplanation11);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("12. Count the number of specified character in a string");
+Console.WriteLine();
+
+string str = "The quick brown fox jumps over the lazy dogs, creating chaos & confusion.";
+char target = 'c';
+int count = str.Count((c) => c == target);
+Console.WriteLine(str);
+Console.WriteLine("The number of '" + target + "' characters found in sentence = " + count);
+
+string codeExample12 = @"
+string str = ""The quick brown fox jumps over the lazy dogs, creating chaos & confusion."";
+char target = 'c';
+int count = str.Count((c) => c == target);
+Console.WriteLine(str);
+Console.WriteLine(""The number of '"" + target + ""' characters found in sentence = "" + count);
+";
+
+Console.WriteLine(codeExample12);
+
+string codeExplanation12 = @"
+The code reads a string 'str' & counts the 
+occurrences of a target character 'c' within 
+that string using the 'Count()' method. The 'Count()' 
+method applies a lambda expression as a predicate to 
+check if each character in the string is equal to the 
+target character. It iterates through the characters, 
+increments a counter for each match, & stores the count 
+in the 'count' variable. The code then outputs the 
+original string & displays the count of occurrences 
+of the target character. The 'Count()' method simplifies 
+the counting process by handling the iteration & comparison, 
+making it concise & efficient.
+";
+
+Console.WriteLine(codeExplanation12);
