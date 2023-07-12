@@ -779,13 +779,8 @@ static void printPrimes(int n)
     }
 }
 
-int n = 1;
-printPrimes(n);
-n = 2;
-printPrimes(n);
-n = 3;
-printPrimes(n);
-n = 4;
-printPrimes(4);
-n = 50;
-printPrimes(n);
+int[] numbers = { 1, 2, 3, 4, 50 };
+foreach (int n in numbers)
+{
+    printPrimes(n);
+}
