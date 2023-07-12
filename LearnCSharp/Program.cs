@@ -729,3 +729,58 @@ making it concise & efficient.
 ";
 
 Console.WriteLine(codeExplanation12);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("13. Write a for loop");
+Console.WriteLine();
+
+static bool isPrime(int num)
+{
+    for (int i = 2; i <= Math.Sqrt(num); i++)
+    {
+        if (num % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+static void printPrimes(int n)
+{
+    if (n < 2)
+    {
+        Console.WriteLine(n + " is not a prime number.");
+    }
+    else if (n == 2)
+    {
+        Console.WriteLine(n + " is a prime number.");
+    }
+    else if (n > 2) //e.g. 6
+    {
+        List<int> primes = new();
+        for (int i = 3; i <= n; i++) //3, 4, 5
+        {
+            if (isPrime(i))
+            {
+                primes.Add(i);
+            }
+        }
+        Console.WriteLine(string.Join(", ", primes) + " are prime numbers.");
+    }
+}
+
+int n = 1;
+printPrimes(n);
+n = 2;
+printPrimes(n);
+n = 3;
+printPrimes(n);
+n = 4;
+printPrimes(4);
+n = 50;
+printPrimes(n);
