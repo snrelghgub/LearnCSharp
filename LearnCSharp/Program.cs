@@ -741,6 +741,11 @@ Console.WriteLine();
 
 static bool isPrime(int num)
 {
+    if (num < 2)
+    {
+        return false;
+    }
+
     for (int i = 2; i <= Math.Sqrt(num); i++)
     {
         if (num % i == 0)
@@ -752,25 +757,25 @@ static bool isPrime(int num)
 
 static void printPrimes(int n)
 {
-    if (n < 2)
+    List<int> primesList = new();
+    for (int i = 0; i <= n; i++) //3, 4, 5
     {
-        Console.WriteLine(n + " is not a prime number.");
-    }
-    else if (n == 2)
-    {
-        Console.WriteLine(n + " is a prime number.");
-    }
-    else if (n > 2) //e.g. 6
-    {
-        List<int> primes = new();
-        for (int i = 3; i <= n; i++) //3, 4, 5
+        if (isPrime(i))
         {
-            if (isPrime(i))
-            {
-                primes.Add(i);
-            }
+            primesList.Add(i);
         }
-        Console.WriteLine(string.Join(", ", primes) + " are prime numbers.");
+    }
+    if (primesList.Count == 0)
+    {
+        Console.WriteLine("No prime numbers found!");
+    }
+    else if (primesList.Count == 1)
+    {
+        Console.WriteLine(primesList[0] + " is a prime number!");
+    }
+    else if (primesList.Count > 1)
+    {
+        Console.WriteLine(string.Join(", ", primesList) + " are prime numbers.");
     }
 }
 
