@@ -758,7 +758,7 @@ static bool isPrime(int num)
 static void printPrimes(int n)
 {
     List<int> primesList = new();
-    for (int i = 0; i <= n; i++) //3, 4, 5
+    for (int i = 0; i <= n; i++) 
     {
         if (isPrime(i))
         {
@@ -784,3 +784,57 @@ foreach (int n in numbers)
 {
     printPrimes(n);
 }
+
+string codeExample13 = @"
+static bool isPrime(int num)
+{
+    if (num < 2)
+    {
+        return false;
+    }
+
+    for (int i = 2; i <= Math.Sqrt(num); i++)
+    {
+        if (num % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+static void printPrimes(int n)
+{
+    List<int> primesList = new();
+    for (int i = 0; i <= n; i++) 
+    {
+        if (isPrime(i))
+        {
+            primesList.Add(i);
+        }
+    }
+    if (primesList.Count == 0)
+    {
+        Console.WriteLine(""No prime numbers found!"");
+    }
+    else if (primesList.Count == 1)
+    {
+        Console.WriteLine(primesList[0] + "" is a prime number!"");
+    }
+    else if (primesList.Count > 1)
+    {
+        Console.WriteLine(string.Join("", "", primesList) + "" are prime numbers."");
+    }
+}
+
+int[] numbers = { 1, 2, 3, 4, 50 };
+foreach (int n in numbers)
+{
+    printPrimes(n);
+}
+";
+
+Console.WriteLine(codeExample13);
+
+string codeExplanation13 = @"
+    
+";
