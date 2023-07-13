@@ -836,5 +836,17 @@ foreach (int n in numbers)
 Console.WriteLine(codeExample13);
 
 string codeExplanation13 = @"
-    
+This code contains two functions, 'isPrime' & 'printPrimes', 
+which utilize for loops for iteration. The 'isPrime' function 
+uses a for loop to iterate from 2 to the square root of a 
+given number in order to check for factors & determine if 
+it is a prime number. The 'printPrimes' function also employs 
+a for loop to iterate from 0 to a given number, calling the 
+'isPrime' function on each iteration to identify & store 
+prime numbers in a list. The code further utilizes a for-each 
+loop to iterate over an array of numbers, passing each number 
+to the 'printPrimes' function & printing the resulting prime 
+numbers for each input.
 ";
+
+Console.WriteLine(codeExplanation13);
