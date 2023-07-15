@@ -1,5 +1,6 @@
 ﻿using Faker;
 using LearnCSharp;
+using System;
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.BackgroundColor = ConsoleColor.DarkBlue;
@@ -850,3 +851,22 @@ numbers for each input.
 ";
 
 Console.WriteLine(codeExplanation13);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("14. Write a helper method");
+Console.WriteLine();
+
+static string truncate(string str, int maxLength)
+{
+    return (string.Concat(str.AsSpan(0, maxLength), "..."));
+}
+
+string longString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan diam, non tempus nibh.";
+string shortString = truncate(longString, 10);
+
+Console.WriteLine(shortString);
