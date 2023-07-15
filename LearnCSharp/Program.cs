@@ -863,7 +863,7 @@ Console.WriteLine();
 
 static string truncate(string str, int maxLength)
 {
-    return (string.Concat(str.AsSpan(0, maxLength), "..."));
+    return (string.Concat(str.AsSpan(0, maxLength), " ..."));
 }
 
 string longString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan diam, non tempus nibh.";
