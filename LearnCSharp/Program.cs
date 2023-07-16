@@ -861,12 +861,37 @@ Console.WriteLine();
 Console.WriteLine("14. Write a helper method");
 Console.WriteLine();
 
-static string truncate(string str, int maxLength)
+static string Truncate(string str, int maxLength)
 {
     return (string.Concat(str.AsSpan(0, maxLength), " ..."));
 }
 
 string longString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan diam, non tempus nibh.";
-string shortString = truncate(longString, 10);
+string shortString = Truncate(longString, 10);
 
 Console.WriteLine(shortString);
+
+string codeExample14 = @"
+static string Truncate(string str, int maxLength)
+{
+    return (string.Concat(str.AsSpan(0, maxLength), ""...""));
+}
+
+string longString = ""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel accumsan diam, non tempus nibh."";
+string shortString = Truncate(longString, 10);
+
+Console.WriteLine(shortString);
+";
+string codeExplanation14 = @"
+The provided code includes a helper method called 'Truncate', 
+which takes a string 'str' & 'maxLenth' as inputs. Its purpose 
+is to truncate the input string & append ""..."" to indicate the 
+truncation. This method is practical for .NET-based applications 
+as it exemplifies the use of helper methods that encapsulate common 
+functionality, promoting code reuse & modularity. Helper methods 
+allow developers to enhance maintainability & reusability of their 
+projects, adhering to best practices in software development.
+";
+
+Console.WriteLine(codeExample14);
+Console.WriteLine(codeExplanation14);
