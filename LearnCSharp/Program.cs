@@ -1001,17 +1001,22 @@ printMatrix(addition);
 ";
 
 string codeExplanation15 = @"
-
+This code demonstrates how to use a 2D array to represent two 
+matrices, matrix1 & matrix2, which are both of size 3 by 2. The 
+addMatrices function takes these two matrices as input & returns 
+a new 2D array containing the element-wise addition of the two 
+matrices. The function first determines the row & column lengths 
+of the matrices using the GetLength method. It then creates a 
+new 2D array, result, with the same dimensions to store the 
+addition results. The function then iterates over each element 
+of the matrices using nested loops with indices i & j. It adds 
+the corresponding elements from matrix1 & matrix2 & stores 
+the result in the corresponding position of the result array. 
+The printMatrix method is provided to print the resulting matrix 
+to the console in a readable format. It's essential to note that 
+this code assumes that both input matrices have the same dimensions; 
+otherwise, it would result in unexpected behavior or errors. 
 ";
 
 Console.WriteLine(codeExample15);
 Console.WriteLine(codeExplanation15);
-
-
-
-
-
-
-Console.WriteLine();
-Console.WriteLine("16. ");
-Console.WriteLine();
