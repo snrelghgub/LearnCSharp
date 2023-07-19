@@ -913,8 +913,8 @@ int[,] matrix1 =
 
 int[,] matrix2 =
 {
-    {1, 1, 1 },
-    {1, 1, 1 }
+    { 1, 1, 1 },
+    { 1, 1, 1 }
 };
 
 static int[,] addMatrices(int[,] matrix1, int[,] matrix2)
@@ -950,3 +950,68 @@ static void printMatrix(int[,] matrix)
 
 int[,] addition = addMatrices(matrix1, matrix2);
 printMatrix(addition);
+
+
+string codeExample15 = @"
+int[,] matrix1 =
+{
+    { 1, 2, 3 },
+    { 4, 5, 6 }
+};
+
+int[,] matrix2 =
+{
+    { 1, 1, 1 },
+    { 1, 1, 1 }
+};
+
+static int[,] addMatrices(int[,] matrix1, int[,] matrix2)
+{
+    int rowLength = matrix1.GetLength(0);
+    int columnsLength = matrix1.GetLength(1);
+
+    int[,] result = new int[rowLength, columnsLength];
+
+    for (int i = 0; i < rowLength; i++)
+    {
+        for (int j = 0; j < columnsLength; j++)
+        {
+            result[i, j] = matrix1[i, j] + matrix2[i, j];
+        }
+    }
+    return result;
+}
+
+static void printMatrix(int[,] matrix)
+{
+    int rowLength = matrix.GetLength(0);
+    int columnsLength = matrix.GetLength(1);
+    for (int i = 0; i < rowLength; i++)
+    {
+        for (int j = 0; j < columnsLength; j++)
+        {
+            Console.Write(matrix[i, j] + "" "");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] addition = addMatrices(matrix1, matrix2);
+printMatrix(addition);
+";
+
+string codeExplanation15 = @"
+
+";
+
+Console.WriteLine(codeExample15);
+Console.WriteLine(codeExplanation15);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("16. ");
+Console.WriteLine();
