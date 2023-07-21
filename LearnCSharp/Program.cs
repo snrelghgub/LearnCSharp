@@ -1055,3 +1055,50 @@ catch (Exception ex)
 {
     Console.WriteLine($"Caught an unexpected exception: {ex.Message}");
 }
+
+string codeExample16 = @"
+try
+{
+    using (HttpClient httpClient = new HttpClient())
+    {
+        string invalidUrl = ""https://example.com/nonexistent-page"";
+        HttpResponseMessage response = await httpClient.GetAsync(invalidUrl);
+
+if (!response.IsSuccessStatusCode)
+{
+    throw new HttpRequestException($""Failed to fetch data. Status code: {response.StatusCode}"");
+}
+else
+{
+    Console.WriteLine(""Request was successful!"");
+}
+    }
+}
+catch (HttpRequestException ex)
+{
+    Console.WriteLine($""Caught an HttpRequestException: {ex.Message}"");
+}
+catch (Exception ex)
+{
+    Console.WriteLine($""Caught an unexpected exception: {ex.Message}"");
+}
+";
+
+string codeExplanation16 = @"
+
+This C# code exemplifies the concept of exception handling, 
+essential for managing errors during program execution. The 
+'try' block attempts to make an HTTP GET request to a non-existent 
+URL. If the request fails (status code indicating failure), a 
+custom 'HttpRequestException' is thrown with a specific error 
+message. The catch blocks are designed to catch different types 
+of exceptions. The first catch block handles the custom 
+'HttpRequestException', displaying the error message to the user. 
+The second catch block catches any other unexpected exceptions. 
+This code structure allows developers to gracefully handle errors 
+during web requests, ensuring informative feedback 
+about any issues that occurred during the process. 
+";
+
+Console.WriteLine(codeExample16);
+Console.WriteLine(codeExplanation16);
