@@ -1085,7 +1085,6 @@ catch (Exception ex)
 ";
 
 string codeExplanation16 = @"
-
 This C# code exemplifies the concept of exception handling, 
 essential for managing errors during program execution. The 
 'try' block attempts to make an HTTP GET request to a non-existent 
