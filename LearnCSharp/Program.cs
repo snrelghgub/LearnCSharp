@@ -1172,7 +1172,7 @@ static void printBooks(List<Book> list)
     }
 }
 
-List<Book> books = new List<Book>();
+List<Book> books = new();
 books.Add(book1);
 books.Add(book2);
 books.Add(book3);
