@@ -1101,3 +1101,80 @@ about any issues that occurred during the process.
 
 Console.WriteLine(codeExample16);
 Console.WriteLine(codeExplanation16);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("17. Write a class & create objects");
+Console.WriteLine();
+
+Book book1 = new Book
+{
+    name = "Clean Code: A Handbook of Agile Software Craftsmanship",
+    author = new string[] { "Robert C. Martin (Uncle Bob)" },
+    publishingDate = new DateOnly(2008, 8, 11),
+    ISBN10 = "0132350882"
+};
+
+Book book2 = new Book
+{
+    name = "Introduction to Algorithms",
+    author = new string[]
+    {
+    "Thomas H.Cormen",
+    "Charles E.Leiserson",
+    "Ronald L.Rivest",
+    "Clifford Stein"
+    },
+    publishingDate = new DateOnly(2009, 7, 31),
+    ISBN10 = "0262033844"
+};
+
+Book book3 = new Book
+{
+    name = "The Pragmatic Programmer: Your Journey to Mastery",
+    author = new string[]
+    {
+    "Andrew Hunt",
+    "David Thomas"
+    },
+    publishingDate = new DateOnly(1999, 10, 30),
+    ISBN10 = "020161622X"
+};
+
+static void printBooks(List<Book> list)
+{
+    for (int i = 0; i < list.Count; i++)
+    {
+        Console.WriteLine(i + 1 + ".");
+        Console.WriteLine("Book Name: " + list[i].name);
+
+        if (list[i].author.Count() > 1)
+        {
+            Console.Write(list[i].author[0]);
+            for (int j = 1; j < list[i].author.Count(); j++)
+            {
+                Console.Write(", " + list[i].author[j]);
+            }
+        }
+        else if (list[i].author.Count() == 1)
+        {
+            Console.Write(list[i].author[0]);
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Published: " + list[i].publishingDate.ToString("dd/MM/yyyy"));
+        Console.WriteLine("ISBN10: " + list[i].ISBN10);
+        Console.WriteLine();
+    }
+}
+
+List<Book> books = new List<Book>();
+books.Add(book1);
+books.Add(book2);
+books.Add(book3);
+
+printBooks(books);
