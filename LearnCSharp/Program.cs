@@ -1145,7 +1145,7 @@ Book book3 = new Book
     ISBN10 = "020161622X"
 };
 
-static void printBooks(List<Book> list)
+static void PrintBookInformation(List<Book> list)
 {
     for (int i = 0; i < list.Count; i++)
     {
@@ -1177,4 +1177,12 @@ books.Add(book1);
 books.Add(book2);
 books.Add(book3);
 
-printBooks(books);
+PrintBookInformation(books);
+
+string codeExample17 = @"
+    
+";
+
+string codeExplanation17 = @"
+
+";
