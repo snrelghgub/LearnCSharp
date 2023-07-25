@@ -1273,3 +1273,39 @@ objects, object instantiation, list usage, & array traversal.
 
 Console.WriteLine(codeExample17);
 Console.WriteLine(codeExplanation17);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("18. Write a class with a constructor");
+Console.WriteLine();
+
+Computer computer1 = new Computer("Laptop","Dell", "XPS 13 ", "Intel Core i7-1165G7 (11th Gen)", 16384, 512 * 1024);
+Computer computer2 = new Computer("Desktop", "HP", "Pavilion", "AMD Ryzen 9 5900X", 32768, 3000 * 1024);
+Computer computer3 = new Computer("All-in-one PC", "Apple", "iMac 24-inch", "Apple M1", 8192, 256 * 1024);
+
+List < Computer > listOfComputers= new();
+listOfComputers.Add(computer1);
+listOfComputers.Add(computer2);
+listOfComputers.Add(computer3);
+
+static Computer findComputerWithHighestStorageCapacity(List<Computer> list)
+{
+    Computer result = list[0];
+    foreach(Computer computer in list)
+    {
+        if(computer.StorageCapacity > result.StorageCapacity)
+        {
+            result = computer;
+        }
+    }
+
+    return result;
+}
+
+Computer query = findComputerWithHighestStorageCapacity(listOfComputers);
+Console.WriteLine("The computer with the highest storage capacity is the:");
+Console.WriteLine(query.Brand + " " + query.Model+" with "+query.StorageCapacity/1024+" GB storage space.");
