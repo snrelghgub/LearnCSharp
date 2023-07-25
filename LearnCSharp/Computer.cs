@@ -8,13 +8,13 @@ namespace LearnCSharp
 {
     class Computer
     {
-        string Type { get; set; }
-        string Brand { get; set; }
-        string Model { get; set; }
-        string Processor { get; set; }
-        int Ram     { get; set; }
-        int StorageCapacity { get; set; }
-        Computer(string type, string brand, string model, string processor, int ram, int storageCapacity)
+        public string Type { get; set; }
+        public string Brand { get; set; }
+        public string Model { get; set; }
+        public string Processor { get; set; }
+        public int Ram     { get; set; }
+        public int StorageCapacity { get; set; }
+        public Computer(string type, string brand, string model, string processor, int ram, int storageCapacity)
         {
             this.Type = type;
             this.Brand = brand;
