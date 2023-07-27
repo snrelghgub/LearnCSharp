@@ -1366,3 +1366,6 @@ streamlines object creation & ensures objects are in a valid
 state upon instantiation, promoting code reusability & 
 maintainability.
 ";
+
+Console.WriteLine(codeExample18);
+Console.WriteLine(codeExplanation18);
