@@ -1355,5 +1355,14 @@ Console.WriteLine(query.Brand + "" "" + query.Model + "" with "" + query.Storage
 ";
 
 string codeExplanation18 = @"
-
+This C# code defines a 'Computer' class with properties 
+representing computer details. The class has a constructor 
+for convenient object initialization. Three 'Computer' objects 
+are created & added to a 'List<Computer>'. The static method 
+'findComputerWithHighestStorageCapacity' finds the computer with 
+the largest storage capacity by iterating through the list. The 
+result is printed to the console. Using a class constructor 
+streamlines object creation & ensures objects are in a valid 
+state upon instantiation, promoting code reusability & 
+maintainability.
 ";
