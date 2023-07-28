@@ -1369,3 +1369,12 @@ maintainability.
 
 Console.WriteLine(codeExample18);
 Console.WriteLine(codeExplanation18);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("19. Write object methods");
+Console.WriteLine();
