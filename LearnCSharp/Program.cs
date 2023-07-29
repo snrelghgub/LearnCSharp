@@ -1376,5 +1376,97 @@ Console.WriteLine(codeExplanation18);
 
 
 Console.WriteLine();
-Console.WriteLine("19. Write object methods");
+Console.WriteLine("19. Write an object method");
 Console.WriteLine();
+
+static void printStudentsWithScholarship(List<Student> list)
+{
+    foreach (Student student in list)
+    {
+        if (student.HasScholarship())
+        {
+            Console.WriteLine(student.Name + " is on a scholarship.");
+        }
+    }
+}
+
+List<Student> listOfStudents = new();
+for (int i = 0; i < 5; i++)
+{
+    Random random = new();
+    int year = random.Next(1950, 2006);
+    int month = random.Next(1, 13);
+    int day = random.Next(1, DateTime.DaysInMonth(year, month) + 1);
+
+    Student newStudent = new Student(
+        Guid.NewGuid().ToString("N").Substring(0, 10),
+        Faker.Name.FullName(NameFormats.Standard),
+        new DateTime(year, month, day),
+        Convert.ToBoolean(random.Next(2))
+    );
+
+    listOfStudents.Add(newStudent);
+}
+
+printStudentsWithScholarship(listOfStudents);
+
+
+string codeExample19 = @"
+class Student
+{
+    private string StudentId { get; set; }
+    public string? Name { get; set; }
+    private DateTime DateOfBirth { get; set; }
+    private bool IsOnScholarship { get; set; }
+
+    public Student(string studentId, string name, DateTime dateOfBirth, bool isOnScholarship)
+    {
+        this.StudentId = studentId;
+        this.Name = name;
+        this.DateOfBirth = dateOfBirth;
+        this.IsOnScholarship = isOnScholarship;
+    }
+    public bool HasScholarship()
+    {
+        return this.IsOnScholarship;
+    }
+}
+
+static void printStudentsWithScholarship(List<Student> list)
+{
+    foreach (Student student in list)
+    {
+        if (student.HasScholarship())
+        {
+            Console.WriteLine(student.Name + "" is on a scholarship."");
+        }
+    }
+}
+
+List<Student> listOfStudents = new();
+for (int i = 0; i < 5; i++)
+{
+    Random random = new();
+    int year = random.Next(1950, 2006);
+    int month = random.Next(1, 13);
+    int day = random.Next(1, DateTime.DaysInMonth(year, month) + 1);
+
+    Student newStudent = new Student(
+        Guid.NewGuid().ToString(""N"").Substring(0, 10),
+        Faker.Name.FullName(NameFormats.Standard),
+        new DateTime(year, month, day),
+        Convert.ToBoolean(random.Next(2))
+    );
+
+    listOfStudents.Add(newStudent);
+}
+
+printStudentsWithScholarship(listOfStudents);
+";
+
+string codeExplanation19 = @"
+
+";
+
+Console.WriteLine(codeExample19);
+Console.WriteLine(codeExplanation19);

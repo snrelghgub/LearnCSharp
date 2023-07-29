@@ -2,12 +2,12 @@
 {
     internal class Student
     {
-        private int StudentId { get; set; }
-        private string? Name { get; set; }
+        private string StudentId { get; set; }
+        public string? Name { get; set; }
         private DateTime DateOfBirth { get; set; }
         private bool IsOnScholarship { get; set; }
 
-        public Student(int studentId, string name, DateTime dateOfBirth, bool isOnScholarship)
+        public Student(string studentId, string name, DateTime dateOfBirth, bool isOnScholarship)
         {
             this.StudentId = studentId;
             this.Name = name;
