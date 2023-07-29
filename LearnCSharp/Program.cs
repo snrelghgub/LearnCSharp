@@ -1465,7 +1465,19 @@ printStudentsWithScholarship(listOfStudents);
 ";
 
 string codeExplanation19 = @"
-
+This code defines a C# class called 'Student' with properties 
+for 'StudentId', 'Name', 'DateOfBirth', & 'IsOnScholarship'. 
+It has a constructor to initialize these properties when a new 
+Student object is created. Additionally, it includes a public 
+method called 'HasScholarship()' that returns true if the student 
+is on a scholarship, based on the value of the IsOnScholarship 
+property. The code also contains a method called 
+'printStudentsWithScholarship', which takes a list of students 
+& prints the names of those who are on a scholarship. To create 
+a list of students, the code uses a loop to generate random values 
+for each student's name, date of birth, scholarship status, and a 
+unique identifier (StudentId) using the Guid class and Faker 
+library. 
 ";
 
 Console.WriteLine(codeExample19);
