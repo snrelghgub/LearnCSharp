@@ -1518,3 +1518,86 @@ Console.WriteLine(
     "The number of invalid card entries found = " +
     countInvalidCarEntries(cars)
 );
+
+string codeExample20 = @"
+class Car
+{
+    private string Make { get; set; }
+    private string Model { get; set; }
+    private int Year { get; set; }
+    private double price { get; set; }
+    public bool IsAvailable { get; set; }
+
+    public Car(string make, string model, int year, double price)
+    {
+        Make = make;
+        Model = model;
+        Year = year;
+        Price = price;
+    }
+
+    public double Price
+    {
+        get { return price; }
+        set
+        {
+            if (value <= 0)
+            {
+                price = 0;
+                IsAvailable = false;
+            }
+            else
+            {
+                price = value;
+                IsAvailable = true;
+            }
+
+        }
+    }
+}
+
+List<Car> cars = new()
+{
+    new Car(""Toyota"", ""Camry"", 2018, 25000.00),
+    new Car(""Ford"", ""Mustang"", 2020, -50000.00),
+    new Car(""Honda"", ""Civic"", 2019, 20500.00),
+    new Car(""BMW"", ""X5"", 2021, 70000.00),
+    new Car(""Hyundai"", ""Tucson"", 2017, -18000.00)
+};
+
+static int countInvalidCarEntries(List<Car> list)
+{
+    int count = 0;
+    foreach (Car car in list)
+    {
+        if (car.Price <= 0 && car.IsAvailable == false)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+Console.WriteLine(
+    ""The number of invalid card entries found = "" +
+    countInvalidCarEntries(cars)
+);
+";
+
+string codeExplanation20 = @"
+This C# code defines a 'Car' class with mostly private members, 
+including 'Make', 'Model', 'Year', & a private 'price'. The 
+'Price' property has a smart setter that automatically updates 
+the 'IsAvailable' boolean flag based on whether the provided price 
+is valid (greater than 0) or not. If the price is invalid, the car 
+is marked as unavailable. The code then utilizes a method called 
+'countInvalidCarEntries' to iterate through a list of 'Car' objects 
+& count the number of invalid entries, i.e., cars with a price of 0 
+or less and marked as unavailable. The method uses the public 'Price' 
+property to access the price & considers the 'IsAvailable' flag to 
+ensure the correct count. Finally, the code displays the number of 
+invalid car entries to the user.
+";
+
+Console.WriteLine(codeExample20);
+Console.WriteLine(codeExplanation20);
