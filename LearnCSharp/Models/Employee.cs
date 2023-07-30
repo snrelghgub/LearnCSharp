@@ -1,4 +1,4 @@
-﻿namespace LearnCSharp
+﻿namespace LearnCSharp.Models
 {
     class Employee
     {

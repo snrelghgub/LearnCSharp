@@ -1,4 +1,4 @@
-﻿namespace LearnCSharp
+﻿namespace LearnCSharp.Models
 {
     internal class Student
     {
@@ -9,14 +9,14 @@
 
         public Student(string studentId, string name, DateTime dateOfBirth, bool isOnScholarship)
         {
-            this.StudentId = studentId;
-            this.Name = name;
-            this.DateOfBirth = dateOfBirth;
-            this.IsOnScholarship = isOnScholarship;
+            StudentId = studentId;
+            Name = name;
+            DateOfBirth = dateOfBirth;
+            IsOnScholarship = isOnScholarship;
         }
         public bool HasScholarship()
         {
-            return this.IsOnScholarship;
+            return IsOnScholarship;
         }
     }
 }

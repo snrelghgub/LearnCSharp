@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnCSharp
+namespace LearnCSharp.Models
 {
     class Computer
     {
@@ -16,12 +16,12 @@ namespace LearnCSharp
         public int StorageCapacity { get; set; }
         public Computer(string type, string brand, string model, string processor, int ram, int storageCapacity)
         {
-            this.Type = type;
-            this.Brand = brand;
-            this.Model = model;
-            this.Processor = processor;
-            this.Ram = ram;
-            this.StorageCapacity = storageCapacity;
+            Type = type;
+            Brand = brand;
+            Model = model;
+            Processor = processor;
+            Ram = ram;
+            StorageCapacity = storageCapacity;
         }
     }
 }
