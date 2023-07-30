@@ -1482,3 +1482,39 @@ library.
 
 Console.WriteLine(codeExample19);
 Console.WriteLine(codeExplanation19);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("20. Write a getter & setter for a class");
+Console.WriteLine();
+
+List<Car> cars = new()
+{
+    new Car("Toyota", "Camry", 2018, 25000.00),
+    new Car("Ford", "Mustang", 2020, -50000.00),
+    new Car("Honda", "Civic", 2019, 20500.00),
+    new Car("BMW", "X5", 2021, 70000.00),
+    new Car("Hyundai", "Tucson", 2017, -18000.00)
+};
+
+static int countInvalidCarEntries(List<Car> list)
+{
+    int count = 0;
+    foreach (Car car in list)
+    {
+        if (car.Price <= 0 && car.IsAvailable == false)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+Console.WriteLine(
+    "The number of invalid card entries found = " +
+    countInvalidCarEntries(cars)
+);
