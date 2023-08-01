@@ -1630,3 +1630,52 @@ Console.WriteLine(
     "The total number of poem entries received so far = " +
     PoemEntry.getTotalEntries()
 );
+
+string codeExample21 = @"
+class PoemEntry
+{
+    private string? PoetName { get; set; }
+    private string? PoemTitle { get; set; }
+    private string? Poem { get; set; }
+    private bool IsOriginal { get; set; }
+    private static int EntryCount { get; set; }
+    public PoemEntry(string poetName, string poemTitle, string poem, bool isOriginal)
+    {
+        PoetName = poetName;
+        PoemTitle = poemTitle;
+        Poem = poem;
+        IsOriginal = isOriginal;
+        EntryCount++;
+    }
+
+    public static int getTotalEntries()
+    {
+        return EntryCount;
+    }
+}
+";
+
+string codeExplanation21 = @"
+List<PoemEntry> poemEntries = new List<PoemEntry>
+{
+    new PoemEntry(
+        Faker.Name.FullName(NameFormats.Standard), ""Autumn Breeze"",
+        ""Leaves fall gently, dance with ease,\nAutumn breeze whispers in the trees."", true
+    ),
+    new PoemEntry(
+        ""Jane Smith"", ""A Moonlit Night"", ""Beneath the moon's soft silver light,\nShadows dance, embracing night."", false
+    ),
+    new PoemEntry(
+        ""Anonymous"", ""Lost Dreams"",
+        ""In the depths of twilight's gleam,\nLost dreams wander, seeking a seam."", true
+    )
+};
+
+Console.WriteLine(
+    ""The total number of poem entries received so far = "" +
+    PoemEntry.getTotalEntries()
+);
+";
+
+Console.WriteLine(codeExample21);
+Console.WriteLine(codeExplanation21);
