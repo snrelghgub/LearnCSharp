@@ -1601,3 +1601,32 @@ invalid car entries to the user.
 
 Console.WriteLine(codeExample20);
 Console.WriteLine(codeExplanation20);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("21. Write a static class attribute");
+Console.WriteLine();
+
+List<PoemEntry> poemEntries = new List<PoemEntry>
+{
+    new PoemEntry(
+        Faker.Name.FullName(NameFormats.Standard), "Autumn Breeze",
+        "Leaves fall gently, dance with ease,\nAutumn breeze whispers in the trees.", true
+    ),
+    new PoemEntry(
+        "Jane Smith", "A Moonlit Night", "Beneath the moon's soft silver light,\nShadows dance, embracing night.", false
+    ),
+    new PoemEntry(
+        "Anonymous", "Lost Dreams",
+        "In the depths of twilight's gleam,\nLost dreams wander, seeking a seam.", true
+    )
+};
+
+Console.WriteLine(
+    "The total number of poem entries received so far = " +
+    PoemEntry.getTotalEntries()
+);
