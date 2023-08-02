@@ -1688,3 +1688,53 @@ of entries generated from anywhere in the program.
 
 Console.WriteLine(codeExample21);
 Console.WriteLine(codeExplanation21);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("22. Use static class & methods");
+Console.WriteLine();
+
+List<Person> peopleList = new();
+string testMessage = "Test message";
+Logger.LogListType(peopleList);
+Logger.DebugLog(testMessage);
+
+string codeExample22 = @"
+static class Logger
+{
+    public static void LogListType<T>(List<T> list)
+    {
+        Console.WriteLine($""List type: { typeof(T).Name}"");
+    }
+
+    public static void DebugLog(string message)
+    {
+        Console.WriteLine($""[DEBUG]: {message}"");
+    }
+}
+
+List<Person> peopleList = new();
+string testMessage = ""Test message"";
+Logger.LogListType(peopleList);
+Logger.DebugLog(testMessage);
+";
+string codeExplanation22 = @"
+The 'Logger' static class in this C# code demonstrates the use of static 
+methods for logging & debugging purposes. By implementing static methods, 
+it provides a convenient & direct way to access these functionalities 
+throughout the application without needing to create instances. This approach 
+is especially useful in C# .NET web applications, where the static class can 
+serve as a utility class, offering common functionality like logging different 
+types and levels of messages efficiently & with global access. The class can be 
+expanded conveniently by adding more logging methods & enhancing its features as 
+needed, promoting code reusability & maintainability. However, caution should 
+be exercised to avoid excessive use of statics, as it may lead to tight coupling 
+& hinder unit testing.
+";
+
+Console.WriteLine(codeExample22);
+Console.WriteLine(codeExplanation22);
