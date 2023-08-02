@@ -1653,9 +1653,7 @@ class PoemEntry
         return EntryCount;
     }
 }
-";
 
-string codeExplanation21 = @"
 List<PoemEntry> poemEntries = new List<PoemEntry>
 {
     new PoemEntry(
@@ -1675,6 +1673,17 @@ Console.WriteLine(
     ""The total number of poem entries received so far = "" +
     PoemEntry.getTotalEntries()
 );
+";
+
+string codeExplanation21 = @"
+This C# code defines a 'PoemEntry' class representing poem entries. 
+It uses a static field 'EntryCount' to keep track of the total number 
+of entries created. Each time a new 'PoemEntry' instance is constructed, 
+the constructor increments 'EntryCount'. The static method 'getTotalEntries()' 
+allows access to the current value of 'EntryCount' without creating an 
+instance of the class. This approach ensures a global count of all poem 
+entries is maintained conveniently, making it easy to monitor the number 
+of entries generated from anywhere in the program.
 ";
 
 Console.WriteLine(codeExample21);
