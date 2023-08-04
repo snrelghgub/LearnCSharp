@@ -490,46 +490,46 @@ Console.WriteLine();
 
 List<Person> group = new();
 
-group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 11 });
-group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 15 });
-group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 24 });
-group.Add(new Person { name = Faker.Name.FullName(NameFormats.Standard), age = 67 });
+group.Add(new Person { Name = Faker.Name.FullName(NameFormats.Standard), Age = 11 });
+group.Add(new Person { Name = Faker.Name.FullName(NameFormats.Standard), Age = 15 });
+group.Add(new Person { Name = Faker.Name.FullName(NameFormats.Standard), Age = 24 });
+group.Add(new Person { Name = Faker.Name.FullName(NameFormats.Standard), Age = 67 });
 
 static void printAgeMeaning1(Person person)
 {
-    if (person.age < 13)
+    if (person.Age < 13)
     {
-        Console.WriteLine(person.name + " is a child.");
+        Console.WriteLine(person.Name + " is a child.");
     }
-    else if (person.age < 20)
+    else if (person.Age < 20)
     {
-        Console.WriteLine(person.name + " is an adolescent.");
+        Console.WriteLine(person.Name + " is an adolescent.");
     }
-    else if (person.age < 65)
+    else if (person.Age < 65)
     {
-        Console.WriteLine(person.name + " is an adult.");
+        Console.WriteLine(person.Name + " is an adult.");
     }
     else
     {
-        Console.WriteLine(person.name + "is a Senior.");
+        Console.WriteLine(person.Name + "is a Senior.");
     }
 }
 
 static void printAgeMeaning2(Person person)
 {
-    switch (person.age)
+    switch (person.Age)
     {
         case var age when age < 13:
-            Console.WriteLine(person.name + " is a child.");
+            Console.WriteLine(person.Name + " is a child.");
             break;
         case var age when age < 20:
-            Console.WriteLine(person.name + " is an adolescent.");
+            Console.WriteLine(person.Name + " is an adolescent.");
             break;
         case var age when age < 65:
-            Console.WriteLine(person.name + " is an adult.");
+            Console.WriteLine(person.Name + " is an adult.");
             break;
         default:
-            Console.WriteLine(person.name + "is a Senior.");
+            Console.WriteLine(person.Name + "is a Senior.");
             break;
     }
 }
@@ -1738,3 +1738,13 @@ be exercised to avoid excessive use of statics, as it may lead to tight coupling
 
 Console.WriteLine(codeExample22);
 Console.WriteLine(codeExplanation22);
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("23. Implement inheritance");
+Console.WriteLine();
+
