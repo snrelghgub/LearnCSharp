@@ -1756,19 +1756,6 @@ List<Animal> animalList = new List<Animal> {
 
 foreach (Animal animal in animalList)
 {
-    Console.Write($"{animal.Name} is a ");
-    if (animal.GetType() == typeof(Dog))
-    {
-        Console.Write($"{typeof(Dog).Name.ToString().ToLower()} ");
-    }
-    else if (animal.GetType() == typeof(Cat))
-    {
-        Console.Write($"{typeof(Cat).Name.ToString().ToLower()} ");
-    }
-    else
-    {
-        Console.Write($"(unknown) ");
-    }
-    Console.Write($"and {animal.AnimalSound()}");
-    Console.WriteLine();
+    string animalType = animal.GetType().Name.ToLower() == "animal" ? "(unknown)" : animal.GetType().Name.ToLower();
+    Console.WriteLine($"{animal.Name} is a {animalType} and {animal.AnimalSound()}");
 }
