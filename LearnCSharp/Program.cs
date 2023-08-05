@@ -1748,3 +1748,27 @@ Console.WriteLine();
 Console.WriteLine("23. Implement inheritance");
 Console.WriteLine();
 
+List<Animal> animalList = new List<Animal> {
+ new Animal("Charlie",2,10),
+ new Dog("Picsou",3,20),
+ new Cat("Gigi",1,4)
+};
+
+foreach (Animal animal in animalList)
+{
+    Console.Write($"{animal.Name} is a ");
+    if (animal.GetType() == typeof(Dog))
+    {
+        Console.Write($"{typeof(Dog).Name.ToString().ToLower()} ");
+    }
+    else if (animal.GetType() == typeof(Cat))
+    {
+        Console.Write($"{typeof(Cat).Name.ToString().ToLower()} ");
+    }
+    else
+    {
+        Console.Write($"(unknown) ");
+    }
+    Console.Write($"and {animal.AnimalSound()}");
+    Console.WriteLine();
+}
