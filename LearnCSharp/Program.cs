@@ -1748,10 +1748,11 @@ Console.WriteLine();
 Console.WriteLine("23. Implement inheritance");
 Console.WriteLine();
 
-List<Animal> animalList = new List<Animal> {
- new Animal("Charlie",2,10),
- new Dog("Picsou",3,20),
- new Cat("Gigi",1,4)
+List<Animal> animalList = new()
+{
+     new Animal("Charlie",2,10),
+     new Dog("Picsou",3,20),
+     new Cat("Gigi",1,4)
 };
 
 foreach (Animal animal in animalList)
@@ -1759,3 +1760,66 @@ foreach (Animal animal in animalList)
     string animalType = animal.GetType().Name.ToLower() == "animal" ? "(unknown)" : animal.GetType().Name.ToLower();
     Console.WriteLine($"{animal.Name} is a {animalType} and {animal.AnimalSound()}");
 }
+
+string codeExample23 = @"
+class Animal
+{
+    public string? Name { get; set; }
+    public int Age { get; set; }
+    public int Weight { get; set; }
+    public Animal(string? name, int age, int weight)
+    {
+        Name = name;
+        Age = age;
+        Weight = weight;
+    }
+    public virtual string AnimalSound()
+    {
+        return ""makes (unknown) sounds!"";
+    }
+}
+
+class Dog : Animal
+{
+    public Dog(string? name, int age, int weight) : base(name, age, weight) { }
+    public override string AnimalSound()
+    {
+        return ""barks!"";
+    }
+}
+
+class Cat : Animal
+{
+    public Cat(string? name, int age, int weight) : base(name, age, weight) { }
+    public override string AnimalSound()
+    {
+        return ""meows!"";
+    }
+}
+
+List<Animal> animalList = new List<Animal> {
+     new Animal(""Charlie"",2,10),
+     new Dog(""Picsou"",3,20),
+     new Cat(""Gigi"",1,4)
+};
+
+foreach (Animal animal in animalList)
+{
+    string animalType = animal.GetType().Name.ToLower() == ""animal"" ? ""(unknown)"" : animal.GetType().Name.ToLower();
+    Console.WriteLine($""{animal.Name} is a {animalType} and {animal.AnimalSound()}"");
+}
+";
+
+string codeExplanation23 = @"
+This C# code demonstrates the use of inheritance to create a superclass 
+'Animal', & two subclasses 'Dog' and 'Cat', each inheriting properties 
+& methods from 'Animal'. By utilizing 'virtual' & 'override' keywords, 
+specific animal sounds are defined for 'Dog' & 'Cat', enabling the 
+identification & classification of each animal type during the iteration 
+through the 'animalList'. The code showcases the benefits of inheritance 
+in organizing & reusing code, allowing for straightforward implementation 
+& extension of new animal types with their unique characteristics.
+";
+
+Console.WriteLine(codeExample23);
+Console.WriteLine(codeExplanation23);
