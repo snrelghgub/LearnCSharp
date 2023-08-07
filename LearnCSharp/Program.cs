@@ -248,7 +248,7 @@ double xCoordinate = radius * Math.Cos(radians);
 double yCoordinate = radius * Math.Sin(radians);
 Console.WriteLine(String.Concat(
     "The (x,y) coordinates of a point on a circle with radius ", radius,
-    "at an angle of ", angle, "\u00B0 is ",
+    " at an angle of ", angle, "\u00B0 is ",
     "(", Math.Round(xCoordinate, 2), ",", Math.Round(yCoordinate, 2), ")"));
 
 string codeExample5 = @"
