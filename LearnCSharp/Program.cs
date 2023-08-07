@@ -12,7 +12,7 @@ Console.ResetColor();
 
 
 Console.WriteLine();
-Console.WriteLine("1. Draw a shape");
+Console.WriteLine("1. Draw Shapes with C#");
 Console.WriteLine();
 
 int width = 10; 
@@ -57,7 +57,7 @@ Console.WriteLine(codeExplanation1);
 
 
 Console.WriteLine();
-Console.WriteLine("2. Use variables");
+Console.WriteLine("2. Master Variables in C#");
 Console.WriteLine();
 
 //while (true)
@@ -113,7 +113,7 @@ Console.WriteLine(codeExplanation2);
 
 
 Console.WriteLine();
-Console.WriteLine("3. Use the appropriate data type");
+Console.WriteLine("3. Choose Data Types in C#");
 Console.WriteLine();
 
 float num1 = 1.1234567890123456789f;
@@ -156,7 +156,7 @@ Console.Write(codeExplanation3);
 
 
 Console.WriteLine();
-Console.WriteLine("4. Work with strings");
+Console.WriteLine("4.Manipulate Strings in C#");
 Console.WriteLine();
 
 string name1 = Faker.Name.FullName(NameFormats.Standard);
@@ -238,7 +238,7 @@ Console.WriteLine(codeExplanation4);
 
 
 Console.WriteLine();
-Console.WriteLine("5. Work with numbers");
+Console.WriteLine("5. Operate with Numbers in C#");
 Console.WriteLine();
 
 double radius = 5;
@@ -285,7 +285,7 @@ Console.WriteLine(codeExplanation5);
 
 
 Console.WriteLine();
-Console.WriteLine("6. Get user input");
+Console.WriteLine("6. Get User Input in C#");
 Console.WriteLine();
 
 Console.Write("Enter your country name (press Enter for default - Australia): ");
@@ -333,7 +333,7 @@ Console.WriteLine(codeExplanation6);
 
 
 Console.WriteLine();
-Console.WriteLine("7. Work with arrays");
+Console.WriteLine("7. Work with Arrays in C#");
 Console.WriteLine();
 
 Employee[] employees = new Employee[4];
@@ -401,7 +401,7 @@ Console.WriteLine(codeExplanation7);
 
 
 Console.WriteLine();
-Console.WriteLine("8. Write a simple method");
+Console.WriteLine("8. Create Simple Methods");
 Console.WriteLine();
 
 static void SayHelloWorld()
@@ -438,7 +438,7 @@ Console.WriteLine(codeExplanation8);
 
 
 Console.WriteLine();
-Console.WriteLine("9. Write a more complex method");
+Console.WriteLine("9. Develop Advanced Methods");
 Console.WriteLine();
 
 static int fib(int n)
@@ -485,7 +485,7 @@ Console.WriteLine(codeExplanation9);
 
 
 Console.WriteLine();
-Console.WriteLine("10. Write if & switch statements");
+Console.WriteLine("10. Control Flow in C#");
 Console.WriteLine();
 
 List<Person> group = new();
@@ -631,7 +631,7 @@ Console.WriteLine(codeExplanation);
 
 
 Console.WriteLine();
-Console.WriteLine("11. Use a while loop");
+Console.WriteLine("11. Loop with while Statements");
 Console.WriteLine();
 
 List<string> names = new();
@@ -695,7 +695,7 @@ Console.WriteLine(codeExplanation11);
 
 
 Console.WriteLine();
-Console.WriteLine("12. Count the number of specified character in a string");
+Console.WriteLine("12.Count Characters in Strings");
 Console.WriteLine();
 
 string str = "The quick brown fox jumps over the lazy dogs, creating chaos & confusion.";
@@ -737,7 +737,7 @@ Console.WriteLine(codeExplanation12);
 
 
 Console.WriteLine();
-Console.WriteLine("13. Write a for loop");
+Console.WriteLine("13. Iterate using for Loops");
 Console.WriteLine();
 
 static bool isPrime(int num)
@@ -858,7 +858,7 @@ Console.WriteLine(codeExplanation13);
 
 
 Console.WriteLine();
-Console.WriteLine("14. Write a helper method");
+Console.WriteLine("14. Write Helper Methods");
 Console.WriteLine();
 
 static string Truncate(string str, int maxLength)
@@ -902,7 +902,7 @@ Console.WriteLine(codeExplanation14);
 
 
 Console.WriteLine();
-Console.WriteLine("15. Use 2D Arrays to add matrices");
+Console.WriteLine("15. Add Matrices in C#");
 Console.WriteLine();
 
 int[,] matrix1 =
@@ -1027,7 +1027,7 @@ Console.WriteLine(codeExplanation15);
 
 
 Console.WriteLine();
-Console.WriteLine("16. Use exception handling");
+Console.WriteLine("16. Handle Exceptions in C#");
 Console.WriteLine();
 
 try
@@ -1108,7 +1108,7 @@ Console.WriteLine(codeExplanation16);
 
 
 Console.WriteLine();
-Console.WriteLine("17. Write a class & create objects");
+Console.WriteLine("17. Build Classes and Objects");
 Console.WriteLine();
 
 Book book1 = new Book
@@ -1280,7 +1280,7 @@ Console.WriteLine(codeExplanation17);
 
 
 Console.WriteLine();
-Console.WriteLine("18. Write a class with a constructor");
+Console.WriteLine("18. Use Constructors in C#");
 Console.WriteLine();
 
 Computer computer1 = new Computer("Laptop", "Dell", "XPS 13 ", "Intel Core i7-1165G7 (11th Gen)", 16384, 512 * 1024);
@@ -1376,7 +1376,7 @@ Console.WriteLine(codeExplanation18);
 
 
 Console.WriteLine();
-Console.WriteLine("19. Write an object method");
+Console.WriteLine("19. Define Object Methods");
 Console.WriteLine();
 
 static void printStudentsWithScholarship(List<Student> list)
@@ -1489,7 +1489,7 @@ Console.WriteLine(codeExplanation19);
 
 
 Console.WriteLine();
-Console.WriteLine("20. Write a getter & setter for a class");
+Console.WriteLine("20. Getters and Setters in Classes");
 Console.WriteLine();
 
 List<Car> cars = new()
@@ -1608,7 +1608,7 @@ Console.WriteLine(codeExplanation20);
 
 
 Console.WriteLine();
-Console.WriteLine("21. Write a static class attribute");
+Console.WriteLine("21. Static Class Attributes");
 Console.WriteLine();
 
 List<PoemEntry> poemEntries = new List<PoemEntry>
@@ -1695,7 +1695,7 @@ Console.WriteLine(codeExplanation21);
 
 
 Console.WriteLine();
-Console.WriteLine("22. Use static class & methods");
+Console.WriteLine("22. Utilize Static Classes");
 Console.WriteLine();
 
 List<Person> peopleList = new();
@@ -1745,7 +1745,7 @@ Console.WriteLine(codeExplanation22);
 
 
 Console.WriteLine();
-Console.WriteLine("23. Implement inheritance");
+Console.WriteLine("23. Implement Inheritance");
 Console.WriteLine();
 
 List<Animal> animalList = new()
