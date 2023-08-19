@@ -1,6 +1,5 @@
 ﻿using Faker;
 using LearnCSharp.Models;
-using System;
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.BackgroundColor = ConsoleColor.DarkBlue;
