@@ -318,7 +318,7 @@ This code collects user input for the country name & city name
 using the 'Console.ReadLine()' method. The 'String.IsNullOrWhiteSpace()'
 method is then used to check if the input is 'null' or consists only of 
 whitespace characters. If the input is 'null' or empty, default values 
-'Australia' for the country name & 'Sydne'y for the city name are assigned. 
+'Australia' for the country name & 'Sydney' for the city name are assigned. 
 The program then outputs a message to the user displaying the country name, 
 city name, & additional text. The important methods used are 'Console.Write()', 
 'Console.ReadLine()' & 'String.IsNullOrWhiteSpace()'.
@@ -459,6 +459,11 @@ static int fib(int n)
     if (n == 1) return 1;
     return fib(n - 2) + fib(n - 1);
 }
+
+Console.WriteLine(
+    ""The 4th number in the Fibonacci sequence is: ""
+    + fib(4).ToString()
+);
 ";
 
 Console.Write(codeExample9);
@@ -613,7 +618,7 @@ string codeExplanation = @"
 This code utilizes two methods, 'printAgeMeaning1' &
 'printAgeMeaning2,' to classify a list of people based
 on their age into categories like child, adolescent, 
-adult, & senior. The code employs if & switch statements 
+adult, & senior. The code employs 'if' & 'switch' statements 
 to evaluate the age of each person and prints their 
 corresponding classification along with their name. 
 It demonstrates the usage of conditional & switch-based 
@@ -1001,17 +1006,17 @@ printMatrix(addition);
 
 string codeExplanation15 = @"
 This code demonstrates how to use a 2D array to represent two 
-matrices, matrix1 & matrix2, which are both of size 3 by 2. The 
-addMatrices function takes these two matrices as input & returns 
+matrices, 'matrix1' & 'matrix2', which are both of size 3 by 2. The 
+'addMatrices' function takes these two matrices as input & returns 
 a new 2D array containing the element-wise addition of the two 
 matrices. The function first determines the row & column lengths 
 of the matrices using the GetLength method. It then creates a 
-new 2D array, result, with the same dimensions to store the 
+new 2D array, 'result', with the same dimensions to store the 
 addition results. The function then iterates over each element 
-of the matrices using nested loops with indices i & j. It adds 
-the corresponding elements from matrix1 & matrix2 & stores 
-the result in the corresponding position of the result array. 
-The printMatrix method is provided to print the resulting matrix 
+of the matrices using nested loops with indices 'i' & 'j'. It adds 
+the corresponding elements from 'matrix1' & 'matrix2' & stores 
+the result in the corresponding position of the 'result' array. 
+The 'printMatrix' method is provided to print the resulting matrix 
 to the console in a readable format. It's essential to note that 
 this code assumes that both input matrices have the same dimensions; 
 otherwise, it would result in unexpected behavior or errors. 
