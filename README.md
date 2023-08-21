@@ -35,7 +35,8 @@ To run the code samples provided in this repository, make sure you have [.NET 6]
 ---
 
 ### 1. Draw Shapes with C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/1ee82ed6-6cc6-440c-8bec-5781fdca4b54)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/7aa99b31-df44-47a3-935f-d12b5c8128a8)
+
 ```csharp
 int width = 10;
 int height = 5;
@@ -52,7 +53,8 @@ for (int i = 0; i < height; i++)
 The code uses two loops to draw a rectangle made of asterisks ('*'). The 'width' & 'height' variables determine the dimensions of the rectangle. The outer loop controls the number of rows, & the inner loop controls the number of asterisks printed per row. The code repeatedly prints asterisks in each row, forming a rectangular shape.
 
 ### 2. Master Variables in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/b534d219-7af5-4f46-a712-060dfe1a101d)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/f64ea055-e951-4d5b-8e5f-f5b5cc49e906)
+
 ```csharp
 while (true)
 {
@@ -69,7 +71,8 @@ while (true)
 This code uses the built-in 'DateTime' data type in C# to extract the current date and time. The variable 'currentTime' is a new instance of the 'DateTime' data type, while 'date' and 'time' are string variables that will hold the formatted date and time values, respectively. The 'ToString()' method is used to extract the month data from 'currentTime' using "MM" and the minutes data using "mm" etc. The Sleep method sets a pause to the while loop for one second, allowing the clock to update correctly. The 'Console.Clear()' method is used to clear the console screen to update the clock every second. The final result is a clock that displays both the 'date' and 'time' accurately. The 'Sleep()' method is part of the System.Threading namespace in C#. The 'WriteLine' method comes from the Console class in C#, which is part of the .Net Framework class library in the System namespace used to print the date & time string variables to the console. Other examples of classes in the System namespace are 'DateTime' and 'ConsoleColor'.
 
 ### 3. Choose Data Types in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/bf4df29f-7c54-4612-bdfd-90c014370416)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/0f766d52-e099-4753-b741-b00940c70600)
+
 ```csharp
 float num1 = 1.1234567890123456789f;
 double num2 = 1.1234567890123456789;
@@ -82,7 +85,8 @@ Console.WriteLine("num3 (decimal):" + num3);
 The code demonstrates the differences in precision among 'float', 'double', & 'decimal' data types. 'Float' offers the lowest precision with approximately 7 significant digits, while 'double' provides higher precision with around 15-16 significant digits. Decimal offers the highest precision with approximately 28-29 significant digits. Use 'decimal' for situations requiring utmost precision, like financial calculations, to avoid rounding errors. Use 'float' when storage efficiency is crucial & the extra precision is not necessary, such as in large datasets where reducing memory footprint improves performance.
 
 ### 4. Manipulate Strings in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/4d1ab5be-8380-4b5e-b428-7c56c6b80d0e)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/59c9cce7-4ef0-4bd5-9093-d35ef06f8e75)
+
 ```csharp
 string name1 = Faker.Name.FullName(NameFormats.Standard);
 string address1 = Faker.Address.StreetAddress() + ", " + Faker.Address.City() + ", " + Faker.Address.UsState() + ", " + Faker.Address.ZipCode();
@@ -114,7 +118,8 @@ foreach (string person in people)
 This code utilizes the Faker.Net library to generate three fake individuals' information, including their names, addresses, & landline numbers. The generated details are stored in separate string variables. These variables are then inserted into a string array 'people', allowing the code to loop through each person's information & report the occurrence of their name, address, & landline number. The Contains() method is employed to check for the presence of specific details within each person's string, enabling the code to generate a report for each individual. This code provides a practical example of working with strings in C#, showcasing concatenation, string arrays, and the Contains() method for efficient string handling & analysis.
 
 ### 5. Operate with Numbers in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/4acac89f-9768-4b7b-adc1-19387611141b)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/ea43b7f1-a240-45bd-8ce9-c1354be22874)
+
 ```csharp
 double radius = 5;
 double angle = 45;
@@ -130,7 +135,8 @@ Console.WriteLine(String.Concat(
 This code calculates the (x, y) coordinates of a point on a circle with a given 'radius' & 'angle'. By utilizing the Math library's methods such as 'Cos()', 'Sin()', and constants like 'PI', the code converts the 'angle' from degrees to 'radians' & then calculates the x & y coordinates using trigonometric functions. The result is displayed in a formatted message using 'Console.WriteLine', with the coordinates rounded to two decimal places for clarity. These Math library functions & constants make it easier to perform calculations involving angles, circles & trigonometry.
 
 ### 6. Get User Input in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/fc9be90f-0f45-439b-adb3-659da4d4d17a)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/20981af8-9657-42f8-b363-7896da88de95)
+
 ```csharp
 Console.Write("Enter your country name (press Enter for default - Australia): ");
 string? countryName = Console.ReadLine();
@@ -146,7 +152,8 @@ Console.WriteLine("You live in " + countryName + " & you're located in the city 
 This code collects user input for the country name & city name using the 'Console.ReadLine()' method. The 'String.IsNullOrWhiteSpace()' method is then used to check if the input is 'null' or consists only of whitespace characters. If the input is 'null' or empty, default values 'Australia' for the country name & 'Sydney' for the city name are assigned. The program then outputs a message to the user displaying the country name, city name, & additional text. The important methods used are 'Console.Write()', 'Console.ReadLine()' & 'String.IsNullOrWhiteSpace()'.
 
 ### 7. Work with Arrays in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/fd269555-4bf3-4f09-ba54-ef2d848564d0)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/a36322ee-f685-42e6-b1b0-bda8b2e72e21)
+
 ```csharp
 Employee[] employees = new Employee[4];
 
@@ -171,7 +178,8 @@ for (int i = 0; i < employees.Length; i++)
 The provided code generates an array 'employees' of size 4. Using a 'for' loop, it populates each element with a newly created 'Employee' object containing a unique 'EmployeeId', a fake 'EmployeeName', & a random 'EmployeeStartDate' within the past 10 years. In a subsequent loop, the code traverses the 'employees' array, accessing each employee's data using the loop index 'i'. It outputs their name & the calculated number of days they have worked, determined by subtracting their 'EmployeeStartDate' from the current date using 'DateTime.Now.Subtract()'.
 
 ### 8. Create Simple Methods
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/98a1a2b7-40b5-43c3-a548-4a85136cd25d)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/4a8ff480-3d7b-4da0-8f5b-28d5102d7687)
+
 ```csharp
 static void SayHelloWorld()
 {
@@ -183,7 +191,8 @@ SayHelloWorld();
 The code snippet defines a method called "SayHelloWorld()" in C# with a return type of "void ". This method writes "Hello World" to the console when invoked. It can be called directly without creating an object of a class, making it a convenient way to display the message without unnecessary complexity.
 
 ### 9. Develop Advanced Methods
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/f42ce1d9-7d87-4dd9-acb9-6e84b12ce55c)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/adf14b54-8f49-4ece-99b1-e98744e39de3)
+
 ```csharp
 static int fib(int n)
 {
@@ -200,7 +209,8 @@ Console.WriteLine(
 This code implements the Fibonacci sequence using a concise recursive approach. The method fib() takes an integer n as input & returns the nth Fibonacci number. It uses the base cases of 0 and 1, returning those values directly. For other values of n, it recursively calls itself with n - 2 and n - 1 as arguments & returns the sum of the two recursive calls. The recursion stops when n reaches 0 or 1. This concise implementation demonstrates the power of recursion in solving problems by breaking them down into smaller, simpler cases.
 
 ### 10. Control Flow in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/87ca82db-2350-44b5-8b9d-aa2135d0c64f)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/f418fcec-c671-49ab-a153-e87f81ccad3c)
+
 ```csharp
 List<Person> group = new();
 
@@ -264,7 +274,8 @@ foreach (Person person in group)
 This code utilizes two methods, 'printAgeMeaning1' & 'printAgeMeaning2,' to classify a list of people based on their age into categories like child, adolescent, adult, & senior. The code employs 'if' & 'switch' statements to evaluate the age of each person and prints their corresponding classification along with their name. It demonstrates the usage of conditional & switch-based logic to handle different age ranges, providing an organized approach for interpreting & categorizing individuals based on their age within a group.
 
 ### 11. Loop with while Statements
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/2d5ab4bf-b61a-4d9d-9b59-dd1db0f8f3dc)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/756a42be-b043-41a2-9cfe-8179898ccb2a)
+
 ```csharp
 List<string> names = new();
 
@@ -287,7 +298,8 @@ foreach (string name in names)
 The provided code uses a 'while' loop with a 'StreamReader' to read from a text file. For each line, it splits the names separated by commas & spaces, adding them to a 'List<string>'. The extracted names are then printed. This practical application demonstrates how to process a file line by line, extract specific data, & build a collection of values using a 'while' loop, which is suitable when dealing with an unknown number of lines in the file.
 
 ### 12. Count Characters in Strings
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/eebbb0f5-951e-4b47-bb85-81e16482aa1f)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/98517bcd-4430-4562-8896-3f7220ea07e4)
+
 ```csharp
 string str = "The quick brown fox jumps over the lazy dogs, creating chaos & confusion.";
 char target = 'c';
@@ -298,7 +310,8 @@ Console.WriteLine("The number of '" + target + "' characters found in sentence =
 The code reads a string 'str' & counts the occurrences of a target character 'c' within that string using the 'Count()' method. The 'Count()' method applies a lambda expression as a predicate to check if each character in the string is equal to the target character. It iterates through the characters, increments a counter for each match, & stores the count in the 'count' variable. The code then outputs the original string & displays the count of occurrences of the target character. The 'Count()' method simplifies the counting process by handling the iteration & comparison, making it concise & efficient.
 
 ### 13. Iterate using for Loops
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/898d7acb-77c0-4863-ab3b-e429e4a61d07)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/1df3c5d7-661b-467c-a184-5398645ad9b1)
+
 ```csharp
 static bool isPrime(int num)
 {
@@ -349,7 +362,8 @@ foreach (int n in numbers)
 This code contains two functions, 'isPrime' & 'printPrimes', which utilize for loops for iteration. The 'isPrime' function uses a for loop to iterate from 2 to the square root of a given number in order to check for factors & determine if it is a prime number. The 'printPrimes' function also employs a for loop to iterate from 0 to a given number, calling the 'isPrime' function on each iteration to identify & store prime numbers in a list. The code further utilizes a for-each loop to iterate over an array of numbers, passing each number to the 'printPrimes' function & printing the resulting prime numbers for each input.
 
 ### 14. Write Helper Methods
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/b9584ea9-0553-4581-b93e-153f6bec212a)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/cd3c3092-9ab0-4bdf-9ed0-a5429ac7bacc)
+
 ```csharp
 static string Truncate(string str, int maxLength)
 {
@@ -364,7 +378,8 @@ Console.WriteLine(shortString);
 The provided code includes a helper method called 'Truncate', which takes a string 'str' & 'maxLenth' as inputs. Its purpose is to truncate the input string & append "..." to indicate the truncation. This method is practical for .NET-based applications as it exemplifies the use of helper methods that encapsulate common functionality, promoting code reuse & modularity. Helper methods allow developers to enhance maintainability & reusability of their projects, adhering to best practices in software development.
 
 ### 15. Add Matrices in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/f93629f7-1849-4bc7-8222-2c5982ca6574)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/68bbe224-d743-49cc-b166-5320de8f4eed)
+
 ```csharp
 int[,] matrix1 =
 {
@@ -415,7 +430,8 @@ printMatrix(addition);
 This code demonstrates how to use a 2D array to represent two matrices, 'matrix1' & 'matrix2', which are both of size 3 by 2. The addMatrices function takes these two matrices as input & returns a new 2D array containing the element-wise addition of the two matrices. The function first determines the row & column lengths of the matrices using the 'GetLength' method. It then creates a new 2D array, 'result', with the same dimensions to store the addition results. The function then iterates over each element of the matrices using nested loops with indices 'i' & 'j'. It adds the corresponding elements from 'matrix1' & 'matrix2' & stores the result in the corresponding position of the 'result' array. The 'printMatrix' method is provided to print the resulting matrix to the console in a readable format. It's essential to note that this code assumes that both input matrices have the same dimensions; otherwise, it would result in unexpected behavior or errors.
 
 ### 16. Handle Exceptions in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/ce03844a-c0e3-4403-9c9c-61ee9a88a530)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/941f233d-ad06-4edd-a8a1-a716a673af72)
+
 ```csharp
 try
 {
@@ -446,7 +462,8 @@ catch (Exception ex)
 This C# code exemplifies the concept of exception handling, essential for managing errors during program execution. The 'try' block attempts to make an HTTP GET request to a non-existent URL. If the request fails (status code indicating failure), a custom 'HttpRequestException' is thrown with a specific error message. The 'catch' blocks are designed to catch different types of exceptions. The first 'catch' block handles the custom 'HttpRequestException', displaying the error message to the user. The second 'catch' block catches any other unexpected exceptions. This code structure allows developers to gracefully handle errors during web requests, ensuring informative feedback about any issues that occurred during the process.
 
 ### 17. Build Classes and Objects
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/b68a3660-130f-4787-af9a-e7abe5aae08f)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/6a517364-dc88-4e6e-97d7-dc208f2fda2d)
+
 ```csharp
 class Book
 {
@@ -527,7 +544,8 @@ PrintBookInformation(books);
 This code defines a class named 'Book' with properties for book details such as name, author(s), publishing date, and ISBN-10 number. Three instances of the 'Book' class are created, each representing a different book, & added to a 'List' called 'books'. The 'PrintBookInformation' method is then defined to traverse the list & display the book details for each book on the console. It cleverly handles the authors' names array by checking its count, ensuring the names are displayed correctly whether there's a single author or multiple authors. Overall, this example illustrates the fundamental concepts of C# classes, objects, object instantiation, list usage, & array traversal.
 
 ### 18. Use Constructors in C#
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/676b463a-482d-4b3c-a3b5-bd8d18ceb674)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/ef1244e9-8b00-4a36-9434-f18e36dce970)
+
 ```csharp
 class Computer
 {
@@ -574,7 +592,7 @@ Console.WriteLine(query.Brand + " " + query.Model + " with " + query.StorageCapa
 This C# code defines a 'Computer' class with properties representing computer details. The class has a constructor for convenient object initialization. Three 'Computer' objects are created & added to a 'List<Computer>'. The static method 'findComputerWithHighestStorageCapacity' finds the computer with the largest storage capacity by iterating through the list. The result is printed to the console. Using a class constructor streamlines object creation & ensures objects are in a valid state upon instantiation, promoting code reusability & maintainability.
 
 ### 19. Define Object Methods
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/4647ab5e-96f3-4537-ac3a-0dd27121bb00)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/88174269-4dbc-4175-9e18-3a050164ce5a)
 
 ```csharp
 class Student
@@ -632,7 +650,8 @@ This code defines a C# class called 'Student' with properties for 'StudentId', '
 'printStudentsWithScholarship', which takes a list of students & prints the names of those who are on a scholarship. To create a 'listOfStudents', the code uses a loop to generate random values for each student's name, date of birth, scholarship status, and a unique identifier (StudentId) using the Guid class and Faker library.
 
 ### 20. Getters and Setters in Classes
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/d21efa0f-5972-4a3b-b567-58fab8048102)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/9c948596-f9c0-4756-b648-2e0af7fda81f)
+
 ```csharp
 class Car
 {
@@ -700,7 +719,8 @@ Console.WriteLine(
 This C# code defines a 'Car' class with mostly private members, including 'Make', 'Model', 'Year', & a private 'price'. The 'Price' property has a smart setter that automatically updates the 'IsAvailable' boolean flag based on whether the provided price is valid (greater than 0) or not. If the price is invalid, the car is marked as unavailable. The code then utilizes a method called 'countInvalidCarEntries' to iterate through a list of 'Car' objects & count the number of invalid entries, i.e., cars with a price of 0 or less and marked as unavailable. The method uses the public 'Price' property to access the price & considers the 'IsAvailable' flag to ensure the correct count. Finally, the code displays the number of invalid car entries to the user.
 
 ### 21. Static Class Attributes
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/40e0d53c-d7d7-4395-8691-9931826b855c)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/afc5d392-14f1-485f-94b0-112eea826a66)
+
 ```csharp
 class PoemEntry
 {
@@ -746,7 +766,8 @@ Console.WriteLine(
 This C# code defines a 'PoemEntry' class representing poem entries. It uses a static field 'EntryCount' to keep track of the total number of entries created. Each time a new 'PoemEntry' instance is constructed, the constructor increments 'EntryCount'. The static method 'getTotalEntries()' allows access to the current value of 'EntryCount' without creating an instance of the class. This approach ensures a global count of all poem entries is maintained conveniently, making it easy to monitor the number of entries generated from anywhere in the program.
 
 ### 22. Utilize Static Classes
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/1c8a1eda-2ccc-457f-8a8d-0cbaaf158143)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/cee3fa41-7058-4295-95d7-f554cec687fe)
+
 ```csharp
 static class Logger
 {
@@ -770,7 +791,8 @@ The 'Logger' static class in this C# code demonstrates the use of static methods
 throughout the application without needing to create instances. This approach is especially useful in C# .NET web applications, where the static class can serve as a utility class, offering common functionality like logging different types and levels of messages efficiently & with global access. The class can be expanded conveniently by adding more logging methods & enhancing its features as needed, promoting code reusability & maintainability. However, caution should be exercised to avoid excessive use of statics, as it may lead to tight coupling & hinder unit testing.
 
 ### 23. Implement Inheritance
-![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/c008ff47-b25c-4383-9d3f-401db7390e37)
+![image](https://github.com/snrelghgub/LearnCSharp/assets/48052195/2b08fafe-9527-4b09-9854-0f25282da9b6)
+
 ```csharp
 class Animal
 {
