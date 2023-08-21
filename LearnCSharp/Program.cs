@@ -1094,10 +1094,10 @@ essential for managing errors during program execution. The
 'try' block attempts to make an HTTP GET request to a non-existent 
 URL. If the request fails (status code indicating failure), a 
 custom 'HttpRequestException' is thrown with a specific error 
-message. The catch blocks are designed to catch different types 
-of exceptions. The first catch block handles the custom 
+message. The 'catch' blocks are designed to catch different types 
+of exceptions. The first 'catch' block handles the custom 
 'HttpRequestException', displaying the error message to the user. 
-The second catch block catches any other unexpected exceptions. 
+The second 'catch' block catches any other unexpected exceptions. 
 This code structure allows developers to gracefully handle errors 
 during web requests, ensuring informative feedback 
 about any issues that occurred during the process. 
