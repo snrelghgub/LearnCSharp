@@ -1,4 +1,13 @@
 # Learn C#
+This repository is designed to provide you with a solid introduction to the C# programming language. Whether you're a beginner in programming or looking to expand your skills, this course aims to equip you with essential concepts and practical examples. To ensure a hands-on learning experience, this repostory contains a C# console application that you can use to run and test the code locally using .NET 6.
+
+To run the code samples provided in this repository, make sure you have [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0) installed on your system. Follow these steps:
+
+1. Clone this repository using the command: `git clone https://github.com/snrelghgub/LearnCSharp.git`
+2. Navigate to the specific section's folder: `cd LearnCSharp`
+3. Open a terminal and run: `dotnet run`
+
+---
 ## Table of Contents
 1. [Draw Shapes with C#](#1-draw-shapes-with-c)
 2. [Master Variables in C#](#2-master-variables-in-c)
@@ -812,3 +821,16 @@ foreach (Animal animal in animalList)
 ```
 This C# code demonstrates the use of inheritance to create a superclass  'Animal', & two subclasses 'Dog' and 'Cat', each inheriting properties  & methods from 'Animal'. By utilizing 'virtual' & 'override' keywords, specific animal sounds are defined for 'Dog' & 'Cat', enabling the identification & classification of each animal type during the iteration through the 'animalList'. The code showcases the benefits of inheritance 
 in organizing & reusing code, allowing for straightforward implementation & extension of new animal types with their unique characteristics.
+
+---
+## Your Feedback Matters!
+🤝 **How You Can Contribute:**
+
+1. **Raise an Issue:** If you come across a bug, typo, or something that's confusing, don't hesitate to [open an issue](https://github.com/snrelghgub/LearnCSharp/issues). Describe the problem or suggestion in detail, so it can be addressed.
+
+2. **Feedback:** Did a section resonate with you? Did you find the explanations helpful? If there are any areas where you believe improvements can be made, feel free to include your feedback within the issue you raise.
+
+3. **Collaborate:** If you have code improvements, additions, or even extra examples, feel free to submit a pull request so we can enrich our learning experience.
+
+Happy coding! 🎉
+
