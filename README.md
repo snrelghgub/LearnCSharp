@@ -279,7 +279,10 @@ This code utilizes two methods, 'printAgeMeaning1' & 'printAgeMeaning2,' to clas
 ```csharp
 List<string> names = new();
 
-using (StreamReader sr = new StreamReader("..\\..\\..\\names-List.txt"))
+string filename = "names-List.txt";
+string fullPath = Path.Combine(Environment.CurrentDirectory, filename);
+
+using (StreamReader sr = new StreamReader(fullPath))
 {
     string? line;
 while ((line = sr.ReadLine()) != null)

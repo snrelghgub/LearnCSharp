@@ -640,7 +640,10 @@ Console.WriteLine();
 
 List<string> names = new();
 
-using (StreamReader sr = new StreamReader("..\\..\\..\\names-List.txt"))
+string filename = "names-List.txt";
+string fullPath = Path.Combine(Environment.CurrentDirectory, filename);
+
+using (StreamReader sr = new StreamReader(fullPath))
 {
     string? line;
     while ((line = sr.ReadLine()) != null)
@@ -659,7 +662,10 @@ foreach (string name in names)
 string codeExample11 = @"
 List<string> names = new();
 
-using (StreamReader sr = new StreamReader(""..\\..\\..\\names-List.txt""))
+string filename = ""names-List.txt"";
+string fullPath = Path.Combine(Environment.CurrentDirectory, filename);
+
+using (StreamReader sr = new StreamReader(fullPath))
 {
     string? line;
 while ((line = sr.ReadLine()) != null)
