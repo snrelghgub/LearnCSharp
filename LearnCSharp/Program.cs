@@ -1049,7 +1049,7 @@ try
 
         if (!response.IsSuccessStatusCode)
         {
-            throw new HttpRequestException($"Failed to fetch data. Status code: {response.StatusCode}");
+            throw new HttpRequestException($"Failed to fetch data.\nStatus code: {response.StatusCode}");
         }
         else
         {
@@ -1074,15 +1074,15 @@ try
         string invalidUrl = ""https://example.com/nonexistent-page"";
         HttpResponseMessage response = await httpClient.GetAsync(invalidUrl);
 
-if (!response.IsSuccessStatusCode)
-{
-    throw new HttpRequestException($""Failed to fetch data. Status code: {response.StatusCode}"");
-}
-else
-{
-    Console.WriteLine(""Request was successful!"");
-}
-    }
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new HttpRequestException($""Failed to fetch data. Status code: {response.StatusCode}"");
+        }
+        else
+        {
+            Console.WriteLine(""Request was successful!"");
+        }
+     }
 }
 catch (HttpRequestException ex)
 {
